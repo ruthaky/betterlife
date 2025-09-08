@@ -9,7 +9,7 @@ export default function Contact() {
         <title>Contact Us | Better Life Adult Program</title>
       </Head>
 
-      <div className="w-full">
+      <div className="w-full bg-white">
 
        {/* Banner Section */}
        <section className="h-auto pt-[100px] pb-[50px] md:pt-0 md:pb-0 md:h-[500px] flex flex-col justify-center px-6 sm:px-10 md:px-20 bg-gradient-to-r from-[#F3F2EB] to-gray-50 rounded rounded-b-[50px] md:rounded-br-[6rem] md:rounded-bl-[6rem] shadow-sm">

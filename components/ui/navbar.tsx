@@ -139,7 +139,7 @@ export default function Navbar() {
 
       {/* Background Blur */}
       {menuOpen && (
-        <div className="fixed inset-0 backdrop-blur-3xl bg-black/20 z-40"></div>
+        <div className="fixed inset-0 backdrop-blur-3xl /20 z-40"></div>
       )}
     </>
   );
