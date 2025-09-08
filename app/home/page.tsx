@@ -56,10 +56,10 @@ export default function Home() {
     <main className={`font-sans transition-colors duration-500 text-[#0E1A2B] overflow-x-hidden ${darkMode ? "bg-[#F4F2EC]" : "bg-[#FAFAF9]"}`}>
 
       {/* Hero Section */}
-      <section className="min-h-screen relative flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 bg-gradient-to-r from-[#DBDBDB] via-[#F5F5F5] to-[#F4F2EC] rounded-b-[50px]">
+      <section className="h-screen relative flex flex-col md:flex-row items-center justify-center md:justify-between px-6 md:px-20 py-12 bg-gradient-to-r from-[#DBDBDB] via-[#F5F5F5] to-[#F4F2EC] rounded-b-[50px]">
         <Image src={bg} alt="Hero" fill className="absolute top-0 left-0 object-cover opacity-80" />
-        <div className="max-w-lg z-10 text-center md:text-left">
-        <h1 className="text-4xl md:text-[85px] w-[600px] font-bold leading-[0.90]"> We Are <br /> <span>Committed to </span> <br /> <span className="text-[#97C4B9]"> Quality Care</span> </h1>
+        <div className="max-w-lg z-10 text-left">
+        <h1 className="text-[50px] md:text-[85px] md:w-[600px] font-bold leading-[0.90]"> We Are <br /> <span>Committed to </span> <br /> <span className="text-[#97C4B9]"> Quality Care</span> </h1>
           <p className="text-gray-600 mt-4 text-sm sm:text-base">
             Over 70 countries, one incredible journey. Over 70 countries, one incredible journey...
           </p>
@@ -70,24 +70,25 @@ export default function Home() {
           </Link>
         </div>
         <div className="mt-10 md:mt-0 flex justify-center w-full md:w-1/2 z-10">
-          <Image src={img1} alt="Hero" className="rounded-3xl w-[250px] sm:w-[350px] md:w-[450px] h-auto object-cover" />
+          <Image src={img1} alt="Hero" className="rounded-3xl w-[350px] sm:w-[350px] md:w-[450px] h-auto object-cover" />
         </div>
       </section>
 
       {/* Who We Are */}
-      <section className="text-center px-6 md:px-20 py-16 flex flex-col items-center">
-      <p className="text-center text-[50px] font-bold mb-10"> Who we are <motion.div initial={{ width: 0 }} animate={{ width: "70%" }} transition={{ duration: 1 }} className="h-[3px] w-[200px] sm:w-[300px] lg:w-[900px] bg-[#97C4B9] -mt-2 mx-auto" /> </p>
-      <p className="text-gray-600 mx-auto"> Over 70 countries, one incredible journey. Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journey. Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, </p> <br /> <p className="text-gray-600 mx-auto"> Over 70 countries, one incredible journey. Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journey. </p>
-        <Link href="/about">
+      <section className="text-left md:text-center px-6 md:px-20 py-16 flex flex-col items-center">
+      <p className="text-left md:text-center text-[40px] md:text-[50px] font-bold mb-10"> Who we are <motion.div initial={{ width: 0 }} animate={{ width: "70%" }} transition={{ duration: 1 }} className="h-[3px] w-[200px] sm:w-[300px] lg:w-[900px] bg-[#97C4B9] -mt-2 mx-auto" /> </p>
+      <p className="text-gray-600 mx-auto"> Over 70 countries, one incredible journey. Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 . Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, oourney. </p>
+        <div className='w-full flex items-start'><Link href="/about">
           <button className="mt-6 px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
             Read More
           </button>
-        </Link>
+        </Link></div>
+        
       </section>
 
       {/* Services Section */}
       <section ref={servicesRef} className="px-6 md:px-20 py-16 min-h-screen flex flex-col items-center">
-      <p className="text-center text-[50px] font-bold mb-10"> Our Services <motion.div initial={{ width: 0 }} animate={{ width: "70%" }} transition={{ duration: 1 }} className="h-[3px] w-[200px] sm:w-[300px] lg:w-[900px] bg-[#97C4B9] -mt-2 mx-auto" /> </p>
+      <p className="text-center text-[40px] md:text-[50px] font-bold mb-10"> Our Services <motion.div initial={{ width: 0 }} animate={{ width: "70%" }} transition={{ duration: 1 }} className="h-[3px] w-[200px] sm:w-[300px] lg:w-[900px] bg-[#97C4B9] -mt-2 mx-auto" /> </p>
 
         {/* Service Buttons */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-10">
@@ -122,22 +123,24 @@ export default function Home() {
             >
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">{activeService.title}</h3>
               <p className="text-gray-600 text-sm sm:text-base">{activeService.description}</p>
-              <Link href="/services">
+              <motion.div key={activeService.id + "-image"} className="flex justify-center">
+              <Image src={activeService.image} alt={activeService.title} className="rounded-3xl object-cover shadow-lg w-[350px] sm:w-[350px] md:w-[450px] h-auto" />
+            
+            </motion.div>  <div className='w-full flex items-left'><Link href="/services">
                 <motion.button className="bg-[#0E1A2B] px-6 py-3 text-white rounded-lg hover:opacity-90 transition-all duration-300">
                   Read More
                 </motion.button>
-              </Link>
+              </Link></div>
+              
             </motion.div>
-            <motion.div key={activeService.id + "-image"} className="flex justify-center">
-              <Image src={activeService.image} alt={activeService.title} className="rounded-3xl object-cover shadow-lg w-[250px] sm:w-[350px] md:w-[450px] h-auto" />
-            </motion.div>
+           
           </AnimatePresence>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="px-6 md:px-20 py-16 flex flex-col items-left">
-    <div className='w-full flex justify-center items-center'> <h2 className="text-[50px] font-bold mb-12">Frequently Asked Questions <motion.div initial={{ width: 0 }} animate={{ width: "80%" }} transition={{ duration: 1 }} className="h-[3px] w-[200px] sm:w-[300px] lg:w-[900px] bg-[#97C4B9] -mt-2 mx-auto" /></h2></div>  
+    <div className='w-full flex justify-center items-center'> <h2 className="text-[40px] md:text-[50px] font-bold mb-12">Frequently Asked Questions <motion.div initial={{ width: 0 }} animate={{ width: "80%" }} transition={{ duration: 1 }} className="h-[3px] w-[200px] sm:w-[300px] lg:w-[900px] bg-[#97C4B9] -mt-2 mx-auto" /></h2></div>  
         <div className="w-full max-w-full space-y-4">
           {displayedFaqs.map((faq, i) => (
             <motion.div

@@ -77,7 +77,7 @@ export default function About() {
       {/* Team */}
       <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 py-12 md:py-20">
         <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-6">Our Team</h2>
-        <p className="text-gray-600 text-sm sm:text-base md:text-base max-w-4xl mb-10 text-center md:text-left">
+        <p className="text-gray-600 text-sm sm:text-base md:text-base max-w-4xl mb-10 text-left">
           Over 70 countries, one incredible journey. Over 70 countries, one incredible journey.
         </p>
 

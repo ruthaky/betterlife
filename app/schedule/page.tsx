@@ -49,14 +49,14 @@ export default function SchedulePage() {
   return (
     <main className="flex min-h-screen">
       {/* Left Logo Panel */}
-      <div className="w-1/3 bg-[#FAF9F6] flex flex-col items-center justify-center text-center px-6">
-        <Image src="/asset/logo.svg" alt="Logo" className="w-24 mb-4" />
+      <div className="hidden w-1/3 bg-[#FAF9F6] md:flex flex-col items-center justify-center text-center px-6">
+        <Image width={10} height={10} src="/asset/logo.svg" alt="Logo" className="w-24 mb-4" />
         <h2 className="text-xl font-bold">Better Life</h2>
         <p className="text-gray-600">Where everyday is a step forward</p>
       </div>
 
       {/* Right Scheduling Panel */}
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex-1 flex items-center justify-center px-5 md:px-0">
         {step === "calendar" && (
           <div className="w-full max-w-md text-center">
             <h2 className="text-2xl font-bold mb-6">Where would you like to schedule a visit?</h2>

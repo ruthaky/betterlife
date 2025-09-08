@@ -26,7 +26,7 @@ export default function Navbar() {
               <Image src="/asset/logo.svg" alt="Logo" className="w-12 h-12" />
             ) : (
               <div className="flex space-x-14">
-                <Link href="/home" className="hover:text-gray-600 text-sm">Home</Link>
+                <Link href="/" className="hover:text-gray-600 text-sm">Home</Link>
                 <Link href="/about" className="hover:text-gray-600 text-sm">About</Link>
                 <Link href="/services" className="hover:text-gray-600 text-sm">Services</Link>
                 <Link href="/contact-us" className="hover:text-gray-600 text-sm">Contact</Link>
@@ -90,46 +90,50 @@ export default function Navbar() {
         </nav>
 
 
-        {/* Hamburger Button (mobile only) */}
-        <button
-          className="md:hidden w-10 h-10 flex items-center justify-center text-2xl bg-[#0f1c24] text-white rounded-full z-40"
-          onClick={() => setMenuhOpen(!menuhOpen)}
-        >
-          {menuhOpen ? "×" : "≡"}
-        </button>
+      {/* Hamburger Button (mobile only) */}
+<button
+  className="md:hidden w-10 h-10 flex items-center justify-center text-2xl bg-[#0f1c24] text-white rounded-full z-40"
+  onClick={() => setMenuhOpen(!menuhOpen)}
+>
+  {menuhOpen ? "×" : "≡"}
+</button>
 
-      {/* Mobile Menu Overlay */}
-      <div
-        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-white z-10 flex flex-col items-center justify-center space-y-8 transition-transform duration-500 md:hidden ${
-          menuhOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <Link href="/home" onClick={() => setMenuOpen(false)} className="text-2xl font-medium">
-          Home
-        </Link>
-        <Link href="/about" onClick={() => setMenuOpen(false)} className="text-2xl font-medium">
-          About
-        </Link>
-        <Link href="/services" onClick={() => setMenuOpen(false)} className="text-2xl font-medium">
-          Services
-        </Link>
-        <Link href="/contact-us" onClick={() => setMenuOpen(false)} className="text-2xl font-medium">
-          Contact
-        </Link>
-        <Link href="/gallery" onClick={() => setMenuOpen(false)} className="text-2xl font-medium">
-          Gallery
-        </Link>
+{/* Mobile Menu Overlay */}
+<div
+  className={`md:hidden fixed top-0 left-0 w-full h-screen bg-white z-10 flex flex-col items-center justify-center space-y-8 transition-transform duration-500 ${
+    menuhOpen ? "translate-x-0" : "translate-x-full"
+  }`}
+>
+  <Link href="/" onClick={() => setMenuhOpen(false)} className="text-2xl font-medium">
+    Home
+  </Link>
+  <Link href="/about" onClick={() => setMenuhOpen(false)} className="text-2xl font-medium">
+    About
+  </Link>
+  <Link href="/services" onClick={() => setMenuhOpen(false)} className="text-2xl font-medium">
+    Services
+  </Link>
+  <Link href="/contact-us" onClick={() => setMenuhOpen(false)} className="text-2xl font-medium">
+    Contact
+  </Link>
+  <Link href="/gallery" onClick={() => setMenuhOpen(false)} className="text-2xl font-medium">
+    Gallery
+  </Link>
 
-        <div className="mt-10 text-center text-gray-500 space-y-2">
-          <p>betterlife@gmail.com</p>
-          <p>Address</p>
-          <p>09112, Idd</p>
-        </div>
+  <div className="mt-10 text-center text-gray-500 space-y-2">
+    <p>betterlife@gmail.com</p>
+    <p>Address</p>
+    <p>09112, Idd</p>
+  </div>
 
-        <button className="mt-6 px-6 py-3 bg-[#0f1c24] text-white rounded-lg">
-          Schedule a visit
-        </button>
-      </div>
+  <button
+    className="mt-6 px-6 py-3 bg-[#0f1c24] text-white rounded-lg"
+    onClick={() => setMenuhOpen(false)}
+  >
+    Schedule a visit
+  </button>
+</div>
+
 
       </div>
 
