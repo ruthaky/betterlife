@@ -34,11 +34,11 @@ export default function Footer() {
         <div className="flex flex-col items-start md:items-end gap-3 w-full md:w-auto">
           <p className="text-sm md:text-base">Contact Us: info@betterlife.org</p>
           <div className="flex flex-wrap gap-4 text-sm md:text-base">
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-            <a href="#">TikTok</a>
-            <a href="#">Facebook</a>
-            <a href="#">Medium</a>
+            <Link href="#">Instagram</Link>
+            <Link href="#">YouTube</Link>
+            <Link href="#">TikTok</Link>
+            <Link href="#">Facebook</Link>
+            <Link href="#">Medium</Link>
           </div>
         </div>
       </div>

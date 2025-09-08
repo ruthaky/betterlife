@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Gallery() {
   return (
@@ -37,7 +38,7 @@ export default function Gallery() {
         {/* Image Grid */}
         <div className="grid grid-cols-1 px-4 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 w-full max-w-7xl mx-auto">
           {Array.from({ length: 8 }).map((_, i) => (
-            <img
+            <Image
               key={i}
               src="/asset/img2.webp"
               alt={`Gallery ${i + 1}`}

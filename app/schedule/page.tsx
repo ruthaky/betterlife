@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function SchedulePage() {
   const [step, setStep] = useState<"calendar" | "form">("calendar");
@@ -49,7 +50,7 @@ export default function SchedulePage() {
     <main className="flex min-h-screen">
       {/* Left Logo Panel */}
       <div className="w-1/3 bg-[#FAF9F6] flex flex-col items-center justify-center text-center px-6">
-        <img src="/asset/logo.svg" alt="Logo" className="w-24 mb-4" />
+        <Image src="/asset/logo.svg" alt="Logo" className="w-24 mb-4" />
         <h2 className="text-xl font-bold">Better Life</h2>
         <p className="text-gray-600">Where everyday is a step forward</p>
       </div>

@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link";
 import React, { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,14 +23,14 @@ export default function Navbar() {
           <div className="flex items-center justify-between bg-white w-full h-16 px-10 flex-shrink-0">
             {/* Show navlinks when collapsed, big logo when expanded */}
             {menuOpen ? (
-              <img src="/asset/logo.svg" alt="Logo" className="w-12 h-12" />
+              <Image src="/asset/logo.svg" alt="Logo" className="w-12 h-12" />
             ) : (
               <div className="flex space-x-14">
-                <a href="/home" className="hover:text-gray-600 text-sm">Home</a>
-                <a href="/about" className="hover:text-gray-600 text-sm">About</a>
-                <a href="/services" className="hover:text-gray-600 text-sm">Services</a>
-                <a href="/contact-us" className="hover:text-gray-600 text-sm">Contact</a>
-                <a href="/gallery" className="hover:text-gray-600 text-sm">Gallery</a>
+                <Link href="/home" className="hover:text-gray-600 text-sm">Home</Link>
+                <Link href="/about" className="hover:text-gray-600 text-sm">About</Link>
+                <Link href="/services" className="hover:text-gray-600 text-sm">Services</Link>
+                <Link href="/contact-us" className="hover:text-gray-600 text-sm">Contact</Link>
+                <Link href="/gallery" className="hover:text-gray-600 text-sm">Gallery</Link>
               </div>
             )}
 
@@ -49,31 +50,31 @@ export default function Navbar() {
             }`}
           >
             <div className="flex flex-col space-y-6 text-[40px] font-medium text-[#0f1c24] mt-6">
-              <a href="/"> <div className={`transform -translate-y-1/2 transition-all duration-100 ${
+              <Link href="/"> <div className={`transform -translate-y-1/2 transition-all duration-100 ${
                 menuOpen
                   ? "opacity-100 translate-y-3 pointer-events-none"
                   : "opacity-10 translate-y-0"
-              }`}>Home </div></a>
-              <a href="/about"> <div className={`transform -translate-y-1/2 transition-all duration-300 ${
+              }`}>Home </div></Link>
+              <Link href="/about"> <div className={`transform -translate-y-1/2 transition-all duration-300 ${
                 menuOpen
                   ? "opacity-100 translate-y-3 pointer-events-none"
                   : "opacity-10 translate-y-0"
-              }`}>About </div></a>
-               <a href="/services"> <div className={`transform -translate-y-1/2 transition-all duration-500 ${
+              }`}>About </div></Link>
+               <Link href="/services"> <div className={`transform -translate-y-1/2 transition-all duration-500 ${
                 menuOpen
                   ? "opacity-100 translate-y-3 pointer-events-none"
                   : "opacity-10 translate-y-0"
-              }`}>Services </div></a>
-               <a href="/contact-us"> <div className={`transform -translate-y-1/2 transition-all duration-700 ${
+              }`}>Services </div></Link>
+               <Link href="/contact-us"> <div className={`transform -translate-y-1/2 transition-all duration-700 ${
                 menuOpen
                   ? "opacity-100 translate-y-3 pointer-events-none"
                   : "opacity-10 translate-y-0"
-              }`}>Contact</div></a>
-                <a href="/gallery"> <div className={`transform -translate-y-1/2 transition-all duration-900 ${
+              }`}>Contact</div></Link>
+                <Link href="/gallery"> <div className={`transform -translate-y-1/2 transition-all duration-900 ${
                 menuOpen
                   ? "opacity-100 translate-y-3 pointer-events-none"
                   : "opacity-10 translate-y-0"
-              }`}>Gallery </div></a>
+              }`}>Gallery </div></Link>
             </div>
 
             <div className="mt-10 text-sm text-gray-500 text-left">
@@ -82,9 +83,9 @@ export default function Navbar() {
               <p>09112, Idd</p>
             </div>
 
-            <a href="/schedule"><button className="mt-10 flex items-center text-[#0f1c24] font-medium">
+            <Link href="/schedule"><button className="mt-10 flex items-center text-[#0f1c24] font-medium">
               <span className="mr-2 text-[30px]">→</span> Schedule a visit
-            </button></a>
+            </button></Link>
           </div>
         </nav>
 
