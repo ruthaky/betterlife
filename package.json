@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@react-email/components": "^0.5.3",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.542.0",
@@ -17,6 +19,7 @@
     "react": "19.1.0",
     "react-calendar": "^6.0.0",
     "react-dom": "19.1.0",
+    "react-email": "^4.2.11",
     "resend": "^6.0.3"
   },
   "devDependencies": {

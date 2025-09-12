@@ -114,26 +114,29 @@ export default function Home() {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeService.id}
-              className="space-y-4 text-center md:text-left"
+              className="space-y-4 text-center md:text-left flex flex-col"
               variants={contentVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">{activeService.title}</h3>
+              <div><h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">{activeService.title}</h3>
               <p className="text-gray-600 text-sm sm:text-base">{activeService.description}</p>
-              <motion.div key={activeService.id + "-image"} className="flex justify-center">
-              <Image src={activeService.image} alt={activeService.title} className="rounded-3xl object-cover shadow-lg w-[350px] sm:w-[350px] md:w-[450px] h-auto" />
-            
-            </motion.div>  <div className='w-full flex items-left'><Link href="/services">
+             
+            <div className='w-full flex items-left mt-4'><Link href="/services">
+                
                 <motion.button className="bg-[#0E1A2B] px-6 py-3 text-white rounded-lg hover:opacity-90 transition-all duration-300">
                   Read More
                 </motion.button>
               </Link></div>
+              </div>
               
-            </motion.div>
-           
+            </motion.div>  
+            <motion.div key={activeService.id + "-image"} className="flex justify-center">
+              <Image src={activeService.image} alt={activeService.title} className="rounded-3xl object-cover shadow-lg w-[350px] sm:w-[350px] md:w-[450px] h-auto" />
+              </motion.div>
+          
           </AnimatePresence>
         </div>
       </section>

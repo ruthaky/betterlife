@@ -1,8 +1,55 @@
 "use client";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import { useState } from "react";
 
 export default function Contact() {
+  const initialFormData = {
+    name: "",
+    email: "",
+    phonenumber: "",
+    message: "",
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
+  const [status, setStatus] = useState("");
+  const [isSuccess, setIsSuccess] = useState<boolean | null>(null); 
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("Submitting...");
+    setIsSuccess(null);
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setStatus("Form submitted successfully!");
+        setIsSuccess(true);
+        setFormData(initialFormData); // reset form
+      } else {
+        setStatus(`Error: ${result.error || "Failed to submit the form."}`);
+        setIsSuccess(false);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus("An error occurred. Please try again later.");
+      setIsSuccess(false);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -39,24 +86,36 @@ export default function Contact() {
               Get a quick response from our team.
             </p>
 
-            <form className="flex flex-col space-y-4">
+            <form onSubmit={handleSubmit}  className="flex flex-col space-y-4">
               <input
+                 placeholder="Name"
                 type="text"
-                placeholder="Name"
+               id="name"
+                value={formData.name}
+                onChange={handleInputChange}
                 className="border-b border-gray-300 focus:outline-none focus:border-[#0f1c24] py-2 text-sm sm:text-base"
               />
               <input
+                 placeholder="Email"
                 type="email"
-                placeholder="Email"
+                id="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 className="border-b border-gray-300 focus:outline-none focus:border-[#0f1c24] py-2 text-sm sm:text-base"
               />
               <input
-                type="text"
-                placeholder="Phone Number"
+                 placeholder="Phone Number"
+                type="number"
+                id="phonenumber"
+                value={formData.phonenumber}
+                onChange={handleInputChange}
                 className="border-b border-gray-300 focus:outline-none focus:border-[#0f1c24] py-2 text-sm sm:text-base"
               />
               <textarea
+               id="message"
                 placeholder="Message"
+                value={formData.message}
+                onChange={handleInputChange}
                 className="border-b border-gray-300 focus:outline-none focus:border-[#0f1c24] py-2 text-sm sm:text-base"
                 rows={4}
               ></textarea>
@@ -66,7 +125,9 @@ export default function Contact() {
                 className="bg-[#0f1c24] text-white px-6 py-2 rounded-md w-full sm:w-32 md:w-24"
               >
                 Send
-              </button>
+              </button>{status && (
+            <p className={`mt-4 font-semibold ${isSuccess ? "text-green-600" : "text-red-600"}`}>
+              {status}</p> )}
             </form>
           </div>
         </section>

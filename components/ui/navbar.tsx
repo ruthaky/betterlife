@@ -23,7 +23,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between bg-white w-full h-16 px-10 flex-shrink-0">
             {/* Show navlinks when collapsed, big logo when expanded */}
             {menuOpen ? (
-              <Image src="/asset/logo.svg" alt="Logo" className="w-12 h-12" />
+              <Image src="/asset/logo.svg" width={12} height={12} alt="Logo" className="w-12 h-12" />
             ) : (
               <div className="flex space-x-14">
                 <Link href="/" className="hover:text-gray-600 text-sm">Home</Link>
@@ -45,10 +45,11 @@ export default function Navbar() {
 
           {/* Expanded Content */}
           <div
-            className={`flex flex-col items-start px-10 justify-start transition-opacity bg-white w-full duration-500 ${
-              menuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-          >
+  className={`flex flex-col items-start px-10 justify-start 
+    bg-white/70 w-full 
+    transition-all duration-700 ease-in-out
+    ${menuOpen ? "opacity-100 backdrop-blur-md" : "opacity-0 backdrop-blur-none pointer-events-none"}`}
+>
             <div className="flex flex-col space-y-6 text-[40px] font-medium text-[#0f1c24] mt-6">
               <Link href="/"> <div className={`transform -translate-y-1/2 transition-all duration-100 ${
                 menuOpen
