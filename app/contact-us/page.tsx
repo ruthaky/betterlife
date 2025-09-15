@@ -33,7 +33,7 @@ export default function Contact() {
         body: JSON.stringify({ ...formData }),
       });
   
-      let result: any = {};
+      let result: Record<string, unknown> = {};
       try {
         result = await response.json();
       } catch {
@@ -49,9 +49,10 @@ export default function Contact() {
         setStatus(`Error: ${result.error || "Failed to submit the form."}`);
         setIsSuccess(false);
       }
-    } catch (error: any) {
-      console.error("Error submitting form:", error);
-      setStatus(`An error occurred: ${error.message || "Please try again later."}`);
+    } catch (error: unknown) {
+      const err = error as Error;
+      console.error("Error submitting form:", err);
+      setStatus(`An error occurred: ${err.message || "Please try again later."}`);
       setIsSuccess(false);
     }
   };

@@ -26,17 +26,14 @@ export async function POST(request: Request) {
     // }
 
     return NextResponse.json({ status: "success", data });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const err = error as Error;
     console.error("❌ Error sending email:", {
-      name: error.name,
-      message: error.message,
-      stack: error.stack,
-      cause: error.cause,
+      name: err.name,
+      message: err.message,
     });
-
-    // Make sure JSON is always returned
     return NextResponse.json(
-      { status: "error", error: error.message || "Internal Server Error" },
+      { status: "error", error: err.message || "Internal Server Error" },
       { status: 500 }
     );
   }

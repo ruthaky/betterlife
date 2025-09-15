@@ -81,10 +81,10 @@ export default function About() {
       <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 py-12 md:py-20">
         <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-4 md:mb-6">Our History</h2>
         <p className="text-gray-600 text-sm sm:text-base md:text-base w-full mb-4">
-        Better Life was founded in [Year] by [Founder's Name(s)] with a clear purpose: to create a supportive environment where adults receive the tools, respect, and opportunities they need to live fulfilling lives. What began as a small initiative has grown into a robust program, rooted in community, powered by dedicated professionals, and guided by a vision to make meaningful differences.
+        Better Life was founded in Year... by Founders Name with a clear purpose: to create a supportive environment where adults receive the tools, respect, and opportunities they need to live fulfilling lives. What began as a small initiative has grown into a robust program, rooted in community, powered by dedicated professionals, and guided by a vision to make meaningful differences.
         </p>
         <p className="text-gray-600 text-sm sm:text-base md:text-base w-full">
-        Better Life was founded in [Year] by [Founder's Name(s)] with a clear purpose: to create a supportive environment where adults receive the tools, respect, and opportunities they need to live fulfilling lives. What began as a small initiative has grown into a robust program, rooted in community, powered by dedicated professionals, and guided by a vision to make meaningful differences.
+        Better Life was founded in year.. by Founders Name with a clear purpose: to create a supportive environment where adults receive the tools, respect, and opportunities they need to live fulfilling lives. What began as a small initiative has grown into a robust program, rooted in community, powered by dedicated professionals, and guided by a vision to make meaningful differences.
         </p>
       </section>
 
