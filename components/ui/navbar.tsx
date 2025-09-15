@@ -11,7 +11,7 @@ export default function Navbar() {
     <>
       <div className="fixed top-0 left-0 w-full flex justify-between items-start px-4 md:px-14 pt-6 z-50">
         {/* Small Logo (always visible on far left) */}
-        <Link href="/"><img src="/asset/logo.svg" alt="Logo" className="w-12 h-12 md:w-24 md:h-16" /></Link>
+        <Link href="/"><Image width={20} height={20} src="/asset/logo.svg" alt="Logo" className="w-12 h-12 md:w-24 md:h-16" /></Link>
        
 
         {/* Navbar */}
