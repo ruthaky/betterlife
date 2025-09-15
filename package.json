@@ -23,6 +23,7 @@
     "react-email": "^3.0.4",
     "resend": "^6.0.3"
   },
+
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
