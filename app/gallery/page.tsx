@@ -1,10 +1,41 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Gallery() {
+  const [selectedCategory, setSelectedCategory] = useState("ALL");
+
+  // Gallery images with categories
+  const images = [
+    { src: "/asset/activity2.jpeg", alt: "Gallery 6", category: "Activities" },
+    { src: "/asset/facility.jpg", alt: "Gallery 1", category: "Facility" },
+    { src: "/asset/img2.webp", alt: "Gallery 2", category: "Community" },
+    { src: "/asset/care2.jpg", alt: "Gallery 3", category: "Activities" },
+    { src: "/asset/facility2.jpeg", alt: "Gallery 4", category: "Facility" },
+    { src: "/asset/img2.webp", alt: "Gallery 5", category: "Community" },
+    { src: "/asset/activity1.jpg", alt: "Gallery 6", category: "Activities" },
+    { src: "/asset/facility3.webp", alt: "Gallery 7", category: "Facility" },
+    { src: "/asset/care3.jpg", alt: "Gallery 8", category: "Community" },
+    { src: "/asset/facility4.webp", alt: "Gallery 7", category: "Facility" },
+    { src: "/asset/activity3.jpg", alt: "Gallery 6", category: "Activities" },
+  ];
+
+  // Filter images based on selected category
+  const filteredImages =
+    selectedCategory === "ALL"
+      ? images
+      : images.filter((img) => img.category === selectedCategory);
+
+  // Motion variants for images
+  const imageVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+  };
+
   return (
     <>
       <Head>
@@ -27,35 +58,48 @@ export default function Gallery() {
 
         {/* Tabs */}
         <div className="flex flex-wrap gap-4 mb-12 text-gray-600 font-medium">
-          <button className="text-[#0f1c24] border-b-2 border-[#0f1c24] pb-1">
-            ALL
-          </button>
-          <button className="hover:text-[#0f1c24]">Facility</button>
-          <button className="hover:text-[#0f1c24]">Community</button>
-          <button className="hover:text-[#0f1c24]">Activities</button>
+          {["ALL", "Facility", "Community", "Activities"].map((cat) => (
+            <button
+              key={cat}
+              className={`pb-1 ${
+                selectedCategory === cat
+                  ? "text-[#0f1c24] border-b-2 border-[#0f1c24]"
+                  : "hover:text-[#0f1c24]"
+              }`}
+              onClick={() => setSelectedCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
 
-        {/* Image Grid */}
+        {/* Image Grid with AnimatePresence */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 w-full max-w-7xl mx-auto auto-rows-[220px]">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div
-              key={i}
-              className={`relative w-full h-full  ${
-                i % 2 !== 0 ? "md:translate-y-6" : ""
-              }`}
-            >
-              <Image
-                src="/asset/img2.webp"
-                alt={`Gallery ${i + 1}`}
-                fill
-                className="rounded-2xl object-cover"
-                sizes="(max-width: 768px) 100vw,
-                       (max-width: 1200px) 50vw,
-                       25vw"
-                priority={i < 2}
-              />
-            </div>
-          ))}
+          <AnimatePresence>
+            {filteredImages.map((img, i) => (
+              <motion.div
+                key={img.src}
+                className={`relative w-full h-full ${i % 2 !== 0 ? "md:translate-y-6" : ""}`}
+                variants={imageVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                layout
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="rounded-2xl object-cover"
+                  sizes="(max-width: 768px) 100vw,
+                         (max-width: 1200px) 50vw,
+                         25vw"
+                  priority={i < 2}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
 
         {/* Schedule Section */}
@@ -64,12 +108,15 @@ export default function Gallery() {
             Schedule a visit
           </h2>
           <p className="text-gray-600 mb-6 text-sm sm:text-base max-w-2xl">
-            Visit. Ask questions. Every guest is different and we are ready to
-            discuss your loved one’s specific needs...
+            We’d love to meet you and show you around. Schedule a visit to tour
+            our facility, ask questions, and see firsthand what our program
+            offers. Let us know your preferred date and time — we’ll work with
+            you to make your first visit as comfortable and informative as
+            possible.
           </p>
           <Link href="/schedule">
             <button className="px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
-              Schedule
+              Arrange Your Visit
             </button>
           </Link>
         </section>

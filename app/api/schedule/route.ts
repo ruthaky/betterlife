@@ -1,24 +1,25 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend("re_LF6Tccck_7FSQuSCwwvSr4vhNo7x9Wp1q");
+const resend = new Resend("re_eZGpMqHT_BAJoE3UEkHTRyDeQvE4bfqQj");
 
 export async function POST(req: Request) {
   try {
-    const { date, time, email, phone } = await req.json();
+    const { date, time, name, email, phone } = await req.json();
 
-    if (!date || !time || !email || !phone) {
+    if (!date || !time || !email ||!name || !phone) {
       return NextResponse.json({ error: "Missing data" }, { status: 400 });
     }
 
     await resend.emails.send({
-      from: "Better Life <no-reply@yourdomain.com>",
-      to: process.env.COMPANY_EMAIL as string,
+      from: "Website Schedule <onboarding@resend.dev>", // Verified sender email
+      to: ["betterlifellc8@gmail.com"], // Replace with your receiving email
       subject: "New Visit Scheduled",
       html: `
         <h2>New Visit Scheduled</h2>
         <p><strong>Date:</strong> ${date}</p>
         <p><strong>Time:</strong> ${time}</p>
+        <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
       `,

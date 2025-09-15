@@ -31,17 +31,22 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const services = [ { id: 0, title: "Life Skills Training", description: "We help participants build independence with skills like cooking, budgeting, transportation, and personal care—empowering them to thrive in daily life.", image: img2, color: "bg-[#7F649D]", }, { id: 1, title: "Social & Recreational", description: "Building friendships and having fun are at the heart of our program. Through art, music, games, fitness, and group events, participants enjoy activities that spark creativity, teamwork, and joy.", image: img2, color: "bg-[#97C4B9]", }, { id: 2, title: "Community Integration", description: "We connect participants with meaningful roles in the community, from volunteering and supported employment to civic engagement and neighborhood involvement.", image: img2, color: "bg-[#EEB7AE]", }, { id: 3, title: "Health & Wellness", description: "Our holistic wellness approach includes fitness, nutrition, mindfulness, and self-care activities designed to support both physical and emotional health.", image: img2, color: "bg-[#EFD3AA]", }, ];
+  const services = [ { id: 0, title: "Life Skills Training", description: "We help participants develop everyday skills that increase independence and confidence. From cooking simple meals and managing money to practicing personal care and home responsibilities, our training prepares individuals for greater self-sufficiency.", image: img2, color: "bg-[#97C4B9]", }, { id: 1, title: "Social & Recreational", description: "Building friendships and having fun are at the heart of our program. Through art, music, games, fitness, and group events, participants enjoy activities that spark creativity, teamwork, and joy.", image: img2, color: "bg-[#97C4B9]", }, { id: 2, title: "Community Integration", description: "We believe everyone belongs in their community. Our program offers outings to local businesses, libraries, parks, and events, giving participants opportunities to connect with others, explore new experiences, and gain confidence in real-world settings.", image: img2, color: "bg-[#97C4B9]", }, { id: 3, title: "Health & Wellness Support", description: "Wellness is more than just physical health. We provide exercise classes, nutrition education, mindfulness activities, and personal safety workshops. These activities support both physical and emotional well-being, helping participants lead balanced and healthy lives.", image: img2, color: "bg-[#97C4B9]", }, ];
   const [activeService, setActiveService] = useState(services[0]);
 
   const faqs = [
-    { question: "What is the mission of this day program?", answer: "Our mission is to provide meaningful, person-centered services..." },
-    { question: "Who is eligible to join the program?", answer: "We serve adults with developmental or intellectual disabilities..." },
-    { question: "How does daily scheduling work?", answer: "Participants choose their daily activities..." },
-    { question: "What types of activities are offered?", answer: `Our offerings may include:\n- Art and creative workshops...\n- Social events...` },
-    { question: "When does the program operate?", answer: "We offer services Monday through Friday..." },
-    { question: "When does the program operate?", answer: "We offer services Monday through Friday..." },
-    { question: "When does the program operate?", answer: "We offer services Monday through Friday..." },
+    { question: "What is the mission of this day program?", answer: "Our mission is to provide meaningful, person-centered services for adults with developmental and intellectual disabilities—encouraging participation, choice, creativity, and community connection." },
+    { question: "Who is eligible to join the program?", answer: "We serve adults with developmental or intellectual disabilities. Each participant brings their own interests and goals, and together we build a plan tailored to their unique needs and aspirations." },
+    { question: "How does daily scheduling work?", answer: "Participants choose their daily activities upon arrival from the activities we are providing at the facility. A visible schedule board helps individuals plan their own day—from creative arts and social activities to vocational tasks and community outings." },
+    { question: "What types of activities are offered?", answer: `Our offerings may include:\n- Art and creative workshops (e.g., open studio time, crafts)\n- Recreational and social events (e.g., games, karaoke, group hangouts)\n- Vocational experiences (e.g., supported work, community tasks)\n- Fitness, life skills, or other personalized offerings based on interest` },
+    { question: "When does the program operate?", answer: "We offer services Monday through Friday, with both morning and afternoon sessions, designed to accommodate flexible schedules." },
+    { question: "How much choice do participants have?", answer: "Participants have a high level of autonomy. Each person chooses daily activities and participates in planning long-term goals. We emphasize individual freedom and self-direction." },
+    { question: "Who runs the program?", answer: "Our staff are creative, caring professionals who support participants and develop programming. Team members introduce new activity options based on participants’ interests." },
+    { question: "How many participants do you serve?", answer: "We are building a small, supportive community. As we grow, we will scale thoughtfully to maintain quality and flexibility." },
+    { question: "Can newcomers try out the program before committing?", answer: "Yes—prospective participants may visit for a tour, join a single day, or observe activities to experience our environment and programming firsthand." },
+    { question: "How do I enroll, and is there financial support?", answer: "Enrollment involves a consultation to understand needs and goals, followed by program orientation. We accept Oregon’s developmental disability funding options and can help navigate funding resources (e.g., ODDS or Medicaid)." },
+    { question: "How do you involve families and guardians?", answer: "Families and guardians are invited to participate in planning discussions, share daily preferences, and stay connected with our team. We foster open communication and collaborative planning." },
+    { question: "What makes this program different?", answer: "- Choice-driven: Participants decide daily and longer-term activities\n - Dynamic scheduling: A living board adapts based on interest and engagement \n- Creative, responsive staff: Team members co-create and evolve programming \n- Community and vocational integration: Options for both social and meaningful work experience" },
   ];
 
   const displayedFaqs = showAll ? faqs : faqs.slice(0, 5);
@@ -60,8 +65,8 @@ export default function Home() {
         <Image src={bg} alt="Hero" fill className="absolute top-0 left-0 object-cover opacity-80" />
         <div className="max-w-lg z-10 text-left">
         <h1 className="text-[50px] md:text-[85px] md:w-[600px] font-bold leading-[0.90]"> We Are <br /> <span>Committed to </span> <br /> <span className="text-[#97C4B9]"> Quality Care</span> </h1>
-          <p className="text-gray-600 mt-4 text-sm sm:text-base">
-            Over 70 countries, one incredible journey. Over 70 countries, one incredible journey...
+          <p className="text-gray-600 mt-4 text-2xl">
+          Empowering individuals to live richer, more independent lives — every day.
           </p>
           <Link href="/schedule">
             <button className="mt-6 px-6 py-3 bg-[#0E1A2B] text-white rounded-lg shadow-md hover:bg-[#1a2a40] transition">
@@ -77,8 +82,8 @@ export default function Home() {
       {/* Who We Are */}
       <section className="text-left md:text-center px-6 md:px-20 py-16 flex flex-col items-center">
       <p className="text-left md:text-center text-[40px] md:text-[50px] font-bold mb-10"> Who we are <motion.div initial={{ width: 0 }} animate={{ width: "70%" }} transition={{ duration: 1 }} className="h-[3px] w-[200px] sm:w-[300px] lg:w-[900px] bg-[#97C4B9] -mt-2 mx-auto" /> </p>
-      <p className="text-gray-600 mx-auto"> Over 70 countries, one incredible journey. Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 . Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, oourney. </p>
-        <div className='w-full flex items-start'><Link href="/about">
+      <p className="text-gray-600 mx-auto text-[16px]"> At Better Life Adult Program, we believe everyone deserves to live with dignity, purpose, and joy. Our mission is to support adults by providing high-quality care, meaningful opportunities for growth, and a compassionate community where every individual is valued. Whether enhancing daily living skills, engaging in social and recreational activities, or receiving health-oriented support — we’re here to help people thrive.</p>
+        <div className='w-full flex justify-center items-center'><Link href="/about">
           <button className="mt-6 px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
             Read More
           </button>
@@ -172,11 +177,11 @@ export default function Home() {
       <section className="px-6 md:px-20 py-16 bg-[#F6F4EE] text-left">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Schedule a visit</h2>
         <p className="text-gray-600 mb-6 text-sm sm:text-base max-w-2xl">
-          Visit. Ask questions. Every guest is different and we are ready to discuss your loved one’s specific needs...
+        We’d love to meet you and show you around. Schedule a visit to tour our facility, ask questions, and see firsthand what our program offers. Let us know your preferred date and time — we’ll work with you to make your first visit as comfortable and informative as possible.
         </p>
         <Link href="/schedule">
           <button className="px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
-            Schedule
+          Arrange Your Visit
           </button>
         </Link>
       </section>

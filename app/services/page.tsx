@@ -27,8 +27,8 @@ export default function ServicesPage() {
               />
             </h1>
           </div>
-          <p className="text-gray-600 w-full mt-4 text-sm sm:text-base md:text-base text-left">
-          Over 70 countries, one incredible journey. Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journey. Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journey. Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, 
+          <p className="text-gray-600 w-full mt-4 text-[20px] text-left">
+          Our programs are designed to support personal growth, social connection, and overall well-being. From life skills training and community integration to social activities and health support, we provide participants with the tools, experiences, and confidence to thrive in everyday life.
           </p>
         </div>
       </section>
@@ -136,11 +136,11 @@ export default function ServicesPage() {
       <section className="px-6 sm:px-10 md:px-20 py-12 md:py-16 bg-[#F6F4EE] w-full text-left">
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4">Schedule a visit</h2>
         <p className="text-gray-600 mb-6 text-sm sm:text-base max-w-full md:max-w-2xl">
-          Visit. Ask questions. Every guest is different and we are ready to discuss your loved one’s specific needs...
+        We’d love to meet you and show you around. Schedule a visit to tour our facility, ask questions, and see firsthand what our program offers. Let us know your preferred date and time — we’ll work with you to make your first visit as comfortable and informative as possible.
         </p>
         <Link href="/schedule">
           <button className="px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
-            Schedule
+          Arrange Your Visit
           </button>
         </Link>
       </section>

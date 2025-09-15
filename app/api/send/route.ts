@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import EmailTemplate from "@/components/email-template";
 import { NextResponse } from "next/server";
 
-const resend = new Resend("re_MSkLu3Hp_B2v2zg56BVZAUjDYDdeDMmga");
+const resend = new Resend("re_eZGpMqHT_BAJoE3UEkHTRyDeQvE4bfqQj");
 
 export async function POST(request: Request) {
  
@@ -11,7 +11,7 @@ export async function POST(request: Request) {
  const body = await request.json();
     const data = await resend.emails.send({
       from: "Website Contact form <onboarding@resend.dev>", // Verified sender email
-      to: ["asmamawruth@gmail.com"], // Replace with your receiving email
+      to: ["betterlifellc8@gmail.com"], // Replace with your receiving email
       subject: "New Contact Form Submission",
       react: EmailTemplate({
       name: body.name,
@@ -26,10 +26,17 @@ export async function POST(request: Request) {
     // }
 
     return NextResponse.json({ status: "success", data });
-  } catch (error) {
-    console.error("Error sending email:", error);
+  } catch (error: any) {
+    console.error("❌ Error sending email:", {
+      name: error.name,
+      message: error.message,
+      stack: error.stack,
+      cause: error.cause,
+    });
+
+    // Make sure JSON is always returned
     return NextResponse.json(
-      { error: "Internal Server Error" },
+      { status: "error", error: error.message || "Internal Server Error" },
       { status: 500 }
     );
   }

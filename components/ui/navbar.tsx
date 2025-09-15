@@ -51,27 +51,27 @@ export default function Navbar() {
     ${menuOpen ? "opacity-100 backdrop-blur-md" : "opacity-0 backdrop-blur-none pointer-events-none"}`}
 >
             <div className="flex flex-col space-y-6 text-[40px] font-medium text-[#0f1c24] mt-6">
-              <Link href="/"> <div className={`transform -translate-y-1/2 transition-all duration-100 ${
+              <Link href="/" onClick={() => setMenuOpen(false)}> <div className={`transform -translate-y-1/2 transition-all duration-100 ${
                 menuOpen
                   ? "opacity-100 translate-y-3 pointer-events-none"
                   : "opacity-10 translate-y-0"
               }`}>Home </div></Link>
-              <Link href="/about"> <div className={`transform -translate-y-1/2 transition-all duration-300 ${
+              <Link href="/about" onClick={() => setMenuOpen(false)}> <div className={`transform -translate-y-1/2 transition-all duration-300 ${
                 menuOpen
                   ? "opacity-100 translate-y-3 pointer-events-none"
                   : "opacity-10 translate-y-0"
               }`}>About </div></Link>
-               <Link href="/services"> <div className={`transform -translate-y-1/2 transition-all duration-500 ${
+               <Link href="/services" onClick={() => setMenuOpen(false)}> <div className={`transform -translate-y-1/2 transition-all duration-500 ${
                 menuOpen
                   ? "opacity-100 translate-y-3 pointer-events-none"
                   : "opacity-10 translate-y-0"
               }`}>Services </div></Link>
-               <Link href="/contact-us"> <div className={`transform -translate-y-1/2 transition-all duration-700 ${
+               <Link href="/contact-us" onClick={() => setMenuOpen(false)}> <div className={`transform -translate-y-1/2 transition-all duration-700 ${
                 menuOpen
                   ? "opacity-100 translate-y-3 pointer-events-none"
                   : "opacity-10 translate-y-0"
               }`}>Contact</div></Link>
-                <Link href="/gallery"> <div className={`transform -translate-y-1/2 transition-all duration-900 ${
+                <Link href="/gallery" onClick={() => setMenuOpen(false)}> <div className={`transform -translate-y-1/2 transition-all duration-900 ${
                 menuOpen
                   ? "opacity-100 translate-y-3 pointer-events-none"
                   : "opacity-10 translate-y-0"
@@ -79,12 +79,12 @@ export default function Navbar() {
             </div>
 
             <div className="mt-10 text-sm text-gray-500 text-left">
-              <p>betterlife@gmail.com</p>
-              <p>Address</p>
-              <p>09112, Idd</p>
+              <p onClick={() => setMenuOpen(false)}>betterlife@gmail.com</p>
+              <p onClick={() => setMenuOpen(false)}>Address</p>
+              <p onClick={() => setMenuOpen(false)}>09112, Idd</p>
             </div>
 
-            <Link href="/schedule"><button className="mt-10 flex items-center text-[#0f1c24] font-medium">
+            <Link href="/schedule" onClick={() => setMenuOpen(false)}><button className="mt-10 flex items-center text-[#0f1c24] font-medium">
               <span className="mr-2 text-[30px]">→</span> Schedule a visit
             </button></Link>
           </div>

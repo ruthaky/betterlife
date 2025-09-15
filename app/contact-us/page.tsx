@@ -25,16 +25,22 @@ export default function Contact() {
     e.preventDefault();
     setStatus("Submitting...");
     setIsSuccess(null);
-
+  
     try {
       const response = await fetch("/api/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData }),
       });
-
-      const result = await response.json();
-
+  
+      let result: any = {};
+      try {
+        result = await response.json();
+      } catch {
+        // If response is empty or invalid JSON
+        result = { error: "Server returned invalid response" };
+      }
+  
       if (response.ok) {
         setStatus("Form submitted successfully!");
         setIsSuccess(true);
@@ -43,12 +49,13 @@ export default function Contact() {
         setStatus(`Error: ${result.error || "Failed to submit the form."}`);
         setIsSuccess(false);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error submitting form:", error);
-      setStatus("An error occurred. Please try again later.");
+      setStatus(`An error occurred: ${error.message || "Please try again later."}`);
       setIsSuccess(false);
     }
   };
+  
 
   return (
     <>
@@ -72,8 +79,8 @@ export default function Contact() {
               />
             </h1>
           </div>
-          <p className="text-gray-600 w-full mt-4 text-sm sm:text-base md:text-base text-left">
-          Over 70 countries, one incredible journey. Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journey. Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journey. Over 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, one incredible journeyOver 70 countries, 
+          <p className="text-gray-600 w-full mt-4 text-[20px] text-left">
+          Connect with us today, and let’s explore what Better Life can offer. Whether you’re searching for compassionate care, meaningful programs, or a welcoming community, we’re here to walk with you every step of the way. Our team is ready to answer your questions, guide you through our services, and help you or your loved one take the next step toward a more fulfilling and independent life.
           </p>
         </div>
       </section>
@@ -83,7 +90,7 @@ export default function Contact() {
           <div className="w-full max-w-3xl">
             <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold text-[#0f1c24] mb-2">Get In Touch</h2>
             <p className="text-gray-600 mb-6 text-sm sm:text-base">
-              Get a quick response from our team.
+            We’re here to help. Whether you have a question, want to arrange a visit, or just want to learn more — our team is ready to respond quickly.
             </p>
 
             <form onSubmit={handleSubmit}  className="flex flex-col space-y-4">

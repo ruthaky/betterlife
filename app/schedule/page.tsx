@@ -7,6 +7,7 @@ export default function SchedulePage() {
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -25,7 +26,7 @@ export default function SchedulePage() {
       const res = await fetch("/api/schedule", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ date: selectedDate, time: selectedTime, email, phone }),
+        body: JSON.stringify({ date: selectedDate, time: selectedTime, email, phone, name }),
       });
 
       if (res.ok) {
@@ -34,6 +35,7 @@ export default function SchedulePage() {
         setSelectedDate(null);
         setSelectedTime(null);
         setEmail("");
+        setName("");
         setPhone("");
       } else {
         alert("❌ Something went wrong, try again.");
@@ -96,6 +98,13 @@ export default function SchedulePage() {
         {step === "form" && (
           <div className="w-full max-w-md text-center">
             <h2 className="text-2xl font-bold mb-6">Confirm Your Details</h2>
+            <input
+              type="name"
+              placeholder="Your Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="border rounded-lg p-2 mb-4 w-full"
+            />
             <input
               type="email"
               placeholder="Your Email"
