@@ -61,7 +61,7 @@ export default function Home() {
     <main className={`font-sans transition-colors duration-500 text-[#0E1A2B] overflow-x-hidden ${darkMode ? "bg-[#F4F2EC]" : "bg-[#FAFAF9]"}`}>
 
       {/* Hero Section */}
-      <section className="h-screen relative flex flex-col md:flex-row items-center justify-center md:justify-between px-6 md:px-20 py-12 bg-gradient-to-r from-[#DBDBDB] via-[#F5F5F5] to-[#F4F2EC] rounded-b-[50px]">
+      <section className="md:h-screen relative flex flex-col md:flex-row items-center justify-center md:justify-between px-6 md:px-20 pt-24 pb-8 md:pt-0 md:pb-0 md:py-12 bg-gradient-to-r from-[#DBDBDB] via-[#F5F5F5] to-[#F4F2EC] rounded-b-[50px]">
         <Image src={bg} alt="Hero" fill className="absolute top-0 left-0 object-cover opacity-80" />
         <div className="max-w-lg z-10 text-left">
         <h1 className="text-[50px] md:text-[85px] md:w-[600px] font-bold leading-[0.90]"> We Are <br /> <span>Committed to </span> <br /> <span className="text-[#97C4B9]"> Quality Care</span> </h1>
