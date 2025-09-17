@@ -78,9 +78,10 @@ export default function Navbar() {
               }`}>Gallery </div></Link>
             </div>
 
-            <div className="mt-10 text-sm text-gray-500 text-left">
-              <p onClick={() => setMenuOpen(false)}>betterlife@gmail.com</p>
-              <p onClick={() => setMenuOpen(false)}>Address</p>
+            <div className="mt-10 flex flex-col gap-2 text-sm text-gray-500 text-left">
+              <p onClick={() => setMenuOpen(false)}>betterlifellc8@gmail.com</p>
+              <p onClick={() => setMenuOpen(false)}>12220 SW Grant Ave
+              <br></br>Portland, OR  97223</p>
               <p onClick={() => setMenuOpen(false)}>09112, Idd</p>
             </div>
 
@@ -122,8 +123,10 @@ export default function Navbar() {
   </Link>
 
   <div className="mt-10 text-center text-gray-500 space-y-2">
-    <p>betterlife@gmail.com</p>
-    <p>Address</p>
+    <p>betterlifellc8@gmail.com</p>
+    <p>12220 SW Grant Ave
+      <br></br>
+    Portland, OR  97223</p>
     <p>09112, Idd</p>
   </div>
 

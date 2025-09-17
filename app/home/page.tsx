@@ -5,6 +5,10 @@ import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import img1 from "@/public/asset/Frame 87.png";
 import img2 from "@/public/asset/img2.webp";
+import imgs2 from "@/public/asset/06112024+-+InC-36.webp";
+import imgs1 from "@/public/asset/two-storey-brick-building-standing-against-other-c-2023-11-27-05-27-43-utc-2-1.png";
+import imgs3 from "@/public/asset/2014+1-1280w.webp";
+import imgs4 from "@/public/asset/care2.jpg";
 import bg from "@/public/asset/bg.png";
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -31,7 +35,7 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const services = [ { id: 0, title: "Life Skills Training", description: "We help participants develop everyday skills that increase independence and confidence. From cooking simple meals and managing money to practicing personal care and home responsibilities, our training prepares individuals for greater self-sufficiency.", image: img2, color: "bg-[#97C4B9]", }, { id: 1, title: "Social & Recreational", description: "Building friendships and having fun are at the heart of our program. Through art, music, games, fitness, and group events, participants enjoy activities that spark creativity, teamwork, and joy.", image: img2, color: "bg-[#97C4B9]", }, { id: 2, title: "Community Integration", description: "We believe everyone belongs in their community. Our program offers outings to local businesses, libraries, parks, and events, giving participants opportunities to connect with others, explore new experiences, and gain confidence in real-world settings.", image: img2, color: "bg-[#97C4B9]", }, { id: 3, title: "Health & Wellness Support", description: "Wellness is more than just physical health. We provide exercise classes, nutrition education, mindfulness activities, and personal safety workshops. These activities support both physical and emotional well-being, helping participants lead balanced and healthy lives.", image: img2, color: "bg-[#97C4B9]", }, ];
+  const services = [ { id: 0, title: "Life Skills Training", description: "We help participants develop everyday skills that increase independence and confidence. From cooking simple meals and managing money to practicing personal care and home responsibilities, our training prepares individuals for greater self-sufficiency.", image: imgs1, color: "bg-[#97C4B9]", }, { id: 1, title: "Social & Recreational", description: "Building friendships and having fun are at the heart of our program. Through art, music, games, fitness, and group events, participants enjoy activities that spark creativity, teamwork, and joy.", image: imgs2, color: "bg-[#97C4B9]", }, { id: 2, title: "Community Integration", description: "We believe everyone belongs in their community. Our program offers outings to local businesses, libraries, parks, and events, giving participants opportunities to connect with others, explore new experiences, and gain confidence in real-world settings.", image: imgs3, color: "bg-[#97C4B9]", }, { id: 3, title: "Health & Wellness Support", description: "Wellness is more than just physical health. We provide exercise classes, nutrition education, mindfulness activities, and personal safety workshops. These activities support both physical and emotional well-being, helping participants lead balanced and healthy lives.", image: imgs4, color: "bg-[#97C4B9]", }, ];
   const [activeService, setActiveService] = useState(services[0]);
 
   const faqs = [

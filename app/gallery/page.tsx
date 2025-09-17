@@ -31,9 +31,9 @@ export default function Gallery() {
 
   // Motion variants for images
   const imageVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20 },
+    hidden: { opacity: 0, y: 10, scale: 0.98 },
+    visible: { opacity: 1, y: 0, scale: 1 },
+    exit: { opacity: 0, y: -10, scale: 0.98 },
   };
 
   return (
@@ -75,31 +75,34 @@ export default function Gallery() {
 
         {/* Image Grid with AnimatePresence */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 w-full max-w-7xl mx-auto auto-rows-[220px]">
-          <AnimatePresence>
-            {filteredImages.map((img, i) => (
-              <motion.div
-                key={img.src}
-                className={`relative w-full h-full ${i % 2 !== 0 ? "md:translate-y-6" : ""}`}
-                variants={imageVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                layout
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="rounded-2xl object-cover"
-                  sizes="(max-width: 768px) 100vw,
-                         (max-width: 1200px) 50vw,
-                         25vw"
-                  priority={i < 2}
-                />
-              </motion.div>
-            ))}
-          </AnimatePresence>
+        <AnimatePresence mode="popLayout">
+  {filteredImages.map((img, i) => (
+    <motion.div
+      key={img.src}
+      className={`relative w-full h-full ${
+        i % 2 !== 0 ? "md:translate-y-6" : ""
+      }`}
+      variants={imageVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.05 }}
+      layout
+    >
+      <Image
+        src={img.src}
+        alt={img.alt}
+        fill
+        className="rounded-2xl object-cover"
+        sizes="(max-width: 768px) 100vw,
+               (max-width: 1200px) 50vw,
+               25vw"
+        priority={i < 2}
+      />
+    </motion.div>
+  ))}
+</AnimatePresence>
+
         </div>
 
         {/* Schedule Section */}
