@@ -107,7 +107,7 @@ At Better Life Adult Program, we believe everyone deserves to live with dignity,
       </section>
 
       {/* Services Section */}
-      <section ref={servicesRef} className="px-6 md:px-20 py-16 min-h-screen flex flex-col items-center">
+      <section ref={servicesRef} className="px-6 md:px-20 py-28 flex flex-col items-center">
       <p className="text-center text-[40px] md:text-[50px] font-bold mb-10"> Our Services <motion.div initial={{ width: 0 }} animate={{ width: "70%" }} transition={{ duration: 1 }} className="h-[3px] w-[200px] sm:w-[300px] lg:w-[900px] bg-[#97C4B9] -mt-2 mx-auto" /> </p>
 
         {/* Service Buttons */}
