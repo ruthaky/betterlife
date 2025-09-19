@@ -40,12 +40,12 @@ export default function Footer() {
 
         {/* Contact + Socials */}
         <div className="flex flex-col items-start md:items-end gap-3 w-full md:w-auto">
-        <div className="text-right text-white space-y-2">
-    <p className="text-right">betterlifellc8@gmail.com</p>
-    <p className="text-right">12220 SW Grant Ave
+        <div className="md:text-right text-white space-y-2">
+    <p className="md:text-right">betterlifellc8@gmail.com</p>
+    <p className="md:text-right">12220 SW Grant Ave
       <br></br>
     Portland, OR  97223</p>
-    <p className="text-right">09112, Idd</p>
+    <p className="md:text-right">09112, Idd</p>
   </div>
         </div>
       </div>
@@ -53,7 +53,7 @@ export default function Footer() {
       {/* Divider + Copyright */}
       <div className="relative z-10 mt-8 border-t border-white/30 pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs md:text-sm">
         <p>© Better Life 2025. All rights reserved.</p>
-        <p>Designed & Developed by Better Life Team</p>
+        <p>Designed & Developed by <span className="text-black"><Link href="https://www.zareinnovations.com">Zare Innovations</Link></span></p>
       </div>
     </footer>
   );
