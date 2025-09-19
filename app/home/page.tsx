@@ -70,7 +70,7 @@ export default function Home() {
         <div className="max-w-lg z-10 text-left">
         <h1 className="text-[50px] md:text-[85px] md:w-[600px] font-bold leading-[0.90]"> We Are <br /> <span>Committed to </span> <br /> <span className="text-[#97C4B9]"> Quality Care</span> </h1>
           <p className="text-gray-600 mt-4 text-2xl">
-          Empowering individuals to live richer, more independent lives — every day.
+          At Betterlife Adult Program, we empower individuals to live richer, more independent lives — every day.
           </p>
           <Link href="/schedule">
             <button className="mt-6 px-6 py-3 bg-[#0E1A2B] text-white rounded-lg shadow-md hover:bg-[#1a2a40] transition">
@@ -86,7 +86,7 @@ export default function Home() {
       {/* Who We Are */}
       <section className="text-left md:text-center px-6 md:px-20 py-16 flex flex-col items-center">
       <p className="text-left md:text-center text-[40px] md:text-[50px] font-bold mb-10"> Who we are <motion.div initial={{ width: 0 }} animate={{ width: "70%" }} transition={{ duration: 1 }} className="h-[3px] w-[200px] sm:w-[300px] lg:w-[900px] bg-[#97C4B9] -mt-2 mx-auto" /> </p>
-      <p className="text-gray-600 mx-auto text-[16px]"> At Better Life Adult Program, we believe everyone deserves to live with dignity, purpose, and joy. Our mission is to support adults by providing high-quality care, meaningful opportunities for growth, and a compassionate community where every individual is valued. Whether enhancing daily living skills, engaging in social and recreational activities, or receiving health-oriented support — we’re here to help people thrive.</p>
+      <p className="text-gray-600 mx-auto text-[18px]"> At Better Life Adult Program, we believe everyone deserves to live with dignity, purpose, and joy. Our mission is to support adults by providing high-quality care, meaningful opportunities for growth, and a compassionate community where every individual is valued. Whether enhancing daily living skills, engaging in social and recreational activities, or receiving health-oriented support — we’re here to help people thrive.</p>
         <div className='w-full flex justify-center items-center'><Link href="/about">
           <button className="mt-6 px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
             Read More
@@ -105,7 +105,7 @@ export default function Home() {
             <motion.button
               key={service.id}
               onClick={() => setActiveService(service)}
-              className={`px-4 py-2 rounded-full text-sm sm:text-base transition-all duration-300 ${
+              className={`px-4 py-2 rounded-full text-[18px] sm:text-base transition-all duration-300 ${
                 activeService.id === service.id
                   ? `${service.color} text-white shadow-lg`
                   : "bg-white text-gray-800 hover:scale-105"
@@ -131,7 +131,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
             >
               <div><h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">{activeService.title}</h3>
-              <p className="text-gray-600 text-sm sm:text-base">{activeService.description}</p>
+              <p className="text-gray-600 text-[]16px">{activeService.description}</p>
              
             <div className='w-full flex items-left mt-4'><Link href="/services">
                 
@@ -161,12 +161,12 @@ export default function Home() {
               onClick={() => setActiveFAQ(activeFAQ === i ? null : i)}
             >
               <div className="flex justify-between items-center">
-                <span className="font-medium text-sm sm:text-base text-[#0E1A2B]">{faq.question}</span>
+                <span className="font-medium text-[18px] sm:text-base text-[#0E1A2B]">{faq.question}</span>
                 <ChevronDown className={`w-4 h-4 sm:w-5 sm:h-5 transition-transform ${activeFAQ === i ? "rotate-180" : ""}`} />
               </div>
               <AnimatePresence>
                 {activeFAQ === i && (
-                  <motion.p className="mt-3 text-gray-600 text-sm sm:text-base whitespace-pre-line" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}>
+                  <motion.p className="mt-3 text-gray-600 text-[18px] sm:text-base whitespace-pre-line" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}>
                     {faq.answer}
                   </motion.p>
                 )}
@@ -180,7 +180,7 @@ export default function Home() {
       {/* Schedule Section */}
       <section className="px-6 md:px-20 py-16 bg-[#F6F4EE] text-left">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Schedule a visit</h2>
-        <p className="text-gray-600 mb-6 text-sm sm:text-base max-w-2xl">
+        <p className="text-gray-600 mb-6 text-[18px] sm:text-base max-w-2xl">
         We’d love to meet you and show you around. Schedule a visit to tour our facility, ask questions, and see firsthand what our program offers. Let us know your preferred date and time — we’ll work with you to make your first visit as comfortable and informative as possible.
         </p>
         <Link href="/schedule">

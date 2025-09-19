@@ -90,7 +90,7 @@ export default function Contact() {
         <section className="flex flex-col items-left justify-center px-6 sm:px-10 md:px-20 py-16 md:py-28">
           <div className="w-full max-w-3xl">
             <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold text-[#0f1c24] mb-2">Get In Touch</h2>
-            <p className="text-gray-600 mb-6 text-sm sm:text-base">
+            <p className="text-gray-600 mb-6 text-[18px] sm:text-base">
             We’re here to help. Whether you have a question, want to arrange a visit, or just want to learn more — our team is ready to respond quickly.
             </p>
 
@@ -101,7 +101,7 @@ export default function Contact() {
                id="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="border-b border-gray-300 focus:outline-none focus:border-[#0f1c24] py-2 text-sm sm:text-base"
+                className="border-b border-gray-300 focus:outline-none focus:border-[#0f1c24] py-2 text-[18px] sm:text-base"
               />
               <input
                  placeholder="Email"
@@ -109,7 +109,7 @@ export default function Contact() {
                 id="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="border-b border-gray-300 focus:outline-none focus:border-[#0f1c24] py-2 text-sm sm:text-base"
+                className="border-b border-gray-300 focus:outline-none focus:border-[#0f1c24] py-2 text-[18px] sm:text-base"
               />
               <input
                  placeholder="Phone Number"
@@ -117,14 +117,14 @@ export default function Contact() {
                 id="phonenumber"
                 value={formData.phonenumber}
                 onChange={handleInputChange}
-                className="border-b border-gray-300 focus:outline-none focus:border-[#0f1c24] py-2 text-sm sm:text-base"
+                className="border-b border-gray-300 focus:outline-none focus:border-[#0f1c24] py-2 text-[18px] sm:text-base"
               />
               <textarea
                id="message"
                 placeholder="Message"
                 value={formData.message}
                 onChange={handleInputChange}
-                className="border-b border-gray-300 focus:outline-none focus:border-[#0f1c24] py-2 text-sm sm:text-base"
+                className="border-b border-gray-300 focus:outline-none focus:border-[#0f1c24] py-2 text-[18px] sm:text-base"
                 rows={4}
               ></textarea>
 

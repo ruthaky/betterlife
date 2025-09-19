@@ -24,10 +24,10 @@ export default function Footer() {
             <h3 className="font-bold text-xl md:text-2xl">
               Better Life Adult Program
             </h3>
-            <p className="text-sm md:text-base">
+            <p className="text-[18px] md:text-base">
               Where every day is a step forward
             </p>
-            <div className="flex mt-4 flex-wrap gap-4 text-white text-sm md:text-base">
+            <div className="flex mt-4 flex-wrap gap-4 text-white text-[18px] md:text-base">
             <Link href="#">Instagram</Link>
             <Link href="#">YouTube</Link>
             <Link href="#">TikTok</Link>
@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
 
       {/* Divider + Copyright */}
-      <div className="relative z-10 mt-8 border-t border-white/30 pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs md:text-sm">
+      <div className="relative z-10 mt-8 border-t border-white/30 pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs md:text-[18px] ">
         <p>© Better Life 2025. All rights reserved.</p>
         <p>Designed & Developed by <span className="text-black"><Link href="https://www.zareinnovations.com">Zare Innovations</Link></span></p>
       </div>

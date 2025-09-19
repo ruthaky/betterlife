@@ -2,10 +2,20 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuhOpen, setMenuhOpen] = useState(false);
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/contact-us", label: "Contact" },
+    { href: "/gallery", label: "Gallery" },
+  ];
 
   return (
     <>
@@ -26,12 +36,23 @@ export default function Navbar() {
               <Image src="/asset/logo.svg" width={12} height={12} alt="Logo" className="w-12 h-12" />
             ) : (
               <div className="flex space-x-14">
-                <Link href="/" className="hover:text-gray-600 text-sm">Home</Link>
-                <Link href="/about" className="hover:text-gray-600 text-sm">About</Link>
-                <Link href="/services" className="hover:text-gray-600 text-sm">Services</Link>
-                <Link href="/contact-us" className="hover:text-gray-600 text-sm">Contact</Link>
-                <Link href="/gallery" className="hover:text-gray-600 text-sm">Gallery</Link>
-              </div>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`group relative text-sm font-medium transition-colors duration-300 hover:text-gray-600 ${
+                    pathname === link.href ? "text-[#0f1c24]" : ""
+                  }`}
+                >
+                  {link.label}
+                  <span
+                    className={`absolute left-0 -bottom-1 h-[2px] bg-[#0f1c24] transition-all duration-300 ease-in-out
+                      ${pathname === link.href ? "w-full" : "w-0 group-hover:w-full"}`}
+                  ></span>
+                </Link>
+              ))}
+            </div>
+            
             )}
 
             {/* Toggle Button */}

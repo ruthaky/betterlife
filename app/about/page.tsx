@@ -39,7 +39,7 @@ export default function About() {
       <span className="text-lg sm:text-xl md:text-[25px] transition-all duration-300 group-hover:opacity-0">
         Personalized care
       </span>
-      <div className="absolute inset-0 flex items-center justify-center px-4 text-sm sm:text-base md:text-lg text-[#0f1c24] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+      <div className="absolute inset-0 flex items-center justify-center px-4 text-[18px] sm:text-base md:text-lg text-[#0f1c24] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
         We tailor our services to meet individual needs, ensuring every person feels valued and supported.
       </div>
     </div>
@@ -49,7 +49,7 @@ export default function About() {
       <span className="text-lg sm:text-xl md:text-[25px] transition-all duration-300 group-hover:opacity-0">
         Empowerment
       </span>
-      <div className="absolute inset-0 flex items-center justify-center px-4 text-sm sm:text-base md:text-lg text-[#0f1c24] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+      <div className="absolute inset-0 flex items-center justify-center px-4 text-[18px] sm:text-base md:text-lg text-[#0f1c24] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
         We help individuals build confidence and independence by encouraging self-growth and resilience.
       </div>
     </div>
@@ -59,7 +59,7 @@ export default function About() {
       <span className="text-lg sm:text-xl md:text-[25px] transition-all duration-300 group-hover:opacity-0">
         Community Connection
       </span>
-      <div className="absolute inset-0 flex items-center justify-center px-4 text-sm sm:text-base md:text-lg text-[#0f1c24] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+      <div className="absolute inset-0 flex items-center justify-center px-4 text-[18px] sm:text-base md:text-lg text-[#0f1c24] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
         Building strong connections to create a sense of belonging and mutual support within the community.
       </div>
     </div>
@@ -69,7 +69,7 @@ export default function About() {
       <span className="text-lg sm:text-xl md:text-[25px] transition-all duration-300 group-hover:opacity-0">
         Compassionate Support
       </span>
-      <div className="absolute inset-0 flex items-center justify-center px-4 text-sm sm:text-base md:text-lg text-[#0f1c24] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+      <div className="absolute inset-0 flex items-center justify-center px-4 text-[18px] sm:text-base md:text-lg text-[#0f1c24] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
         Offering genuine care and empathy, ensuring people feel understood and never alone in their journey.
       </div>
     </div>
@@ -80,12 +80,12 @@ export default function About() {
       {/* History */}
       <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 py-12 md:py-20">
         <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-4 md:mb-6">Our History</h2>
-        <p className="text-gray-600 text-sm sm:text-base md:text-base w-full mb-4">
+        <p className="text-gray-600 text-[18px] w-full mb-4">
         Our program was founded by sisters Tsion Kiros and Dagmawit Kiros, who have dedicated over seven years to serving individuals with developmental disabilities. Their experience spans both residential and center-based settings, giving them a deep understanding of the unique challenges and opportunities that come with supporting adults in different environments. 
 
 Throughout their careers, Tsion and Dagmawit have worked directly with individuals, families, and interdisciplinary teams to promote growth, independence, and meaningful community involvement. Their passion for advocacy and person-centered care inspired them to create a program where adults with developmental disabilities are not only supported, but truly valued, respected, and given opportunities to thrive. 
         </p>
-        <p className="text-gray-600 text-sm sm:text-base md:text-base w-full">
+        <p className="text-gray-600 text-[18px] w-full">
         With a foundation built on compassion, experience, and a commitment to quality care, our day program was established to provide a safe, structured, and empowering environment. We believe in creating opportunities that nurture social, vocational, and daily living skills—while also building community connections that foster a sense of belonging. 
 
 What began as a shared vision between two sisters has grown into a program dedicated to making a lasting difference in the lives of the people we serve and their families. 
@@ -95,18 +95,18 @@ What began as a shared vision between two sisters has grown into a program dedic
        {/* History */}
        <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 py-12 md:py-20">
         <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-4 md:mb-6">About the founders</h2>
-        <p className="text-gray-600 text-sm sm:text-base md:text-base w-full mb-4">
+        <p className="text-gray-600 text-[18px] w-full mb-4">
         Dagmawit Kiros and her sister Tsion Kiros are the founders of this day program for adults with developmental disabilities. Dagmawit graduated from Texas Tech University with a degree in Nutritional Science and began her career as a Registered Behavior Technician at an ABA center. She then served as Residential Manager at a 24-hour residential home, gaining extensive experience supporting both children and adults in residential and center-based settings. 
 
 Together, Dagmawit and Tsion are committed to creating a safe, supportive, and empowering environment where individuals can build skills, independence, and confidence while feeling valued and included. 
         </p>
-        <p className="text-gray-600 text-sm sm:text-base md:text-base w-full">
+        <p className="text-gray-600 text-[18px] w-full">
         Tsion Kiros is a co-founder of this day program for adults with developmental disabilities. She earned a Bachelor of Science in Human Development and Family Studies and a Master’s in Healthcare Administration from Texas Tech University. Tsion has extensive experience supporting individuals with developmental disabilities across a variety of settings, including center-based programs, residential facilities, and day programs. Her expertise and dedication ensure that the program provides high-quality, person-centered care that fosters growth, independence, and meaningful community connections. 
         </p>
       </section>
 
       {/* Family & Friends */}
-      <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 relative py-12 md:py-20">
+      <section className="hidden flex flex-col justify-center px-6 sm:px-10 md:px-20 relative py-12 md:py-20">
         <div
           className="absolute top-0 left-0 w-full h-16 md:h-20 bg-no-repeat bg-center"
           style={{ backgroundImage: 'url(/wave-pattern.png)' }}
@@ -114,7 +114,7 @@ Together, Dagmawit and Tsion are committed to creating a safe, supportive, and e
         <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-4 md:mb-6">
           Family and Friends support network
         </h2>
-        <p className="text-gray-600 text-sm sm:text-base md:text-base w-full mb-4">
+        <p className="text-gray-600 text-[18px]  w-full mb-4">
         We recognize that meaningful growth happens together. Our program includes close collaboration with families, friends, and caregivers. Together we:
 
 Share updates, goals, and progress so everyone is aligned.
@@ -123,7 +123,7 @@ Offer workshops, resources, and support to caregivers and loved ones.
 
 Celebrate successes collectively, recognizing how relationships enrich participation and wellbeing.
         </p>
-        <p className="text-gray-600 text-sm sm:text-base md:text-base w-full">
+        <p className="text-gray-600 text-[18px]  w-full">
         We recognize that meaningful growth happens together. Our program includes close collaboration with families, friends, and caregivers. Together we:
 
 Share updates, goals, and progress so everyone is aligned.
@@ -137,7 +137,7 @@ Celebrate successes collectively, recognizing how relationships enrich participa
       {/* Team */}
       <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 py-12 md:py-20">
         <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-6">Our Team</h2>
-        <p className="text-gray-600 text-sm sm:text-base md:text-base w-full mb-10 text-left">
+        <p className="text-gray-600 text-[18px] w-full mb-10 text-left">
         Our dedicated team brings together professional experience, passion, and compassion. From experienced caregivers, therapists, and activity coordinators to administrative staff, everyone at Better Life shares a single goal: helping each participant live a better life.
         </p>
 
@@ -155,8 +155,8 @@ Celebrate successes collectively, recognizing how relationships enrich participa
                 className="w-full h-64 sm:h-60 md:h-64 object-cover"
               />
               <div className="p-4">
-                <p className="text-xs sm:text-sm md:text-sm text-gray-500">CEO, Co-founder</p>
-                <h3 className="font-semibold text-sm sm:text-base md:text-base">Jane Doe</h3>
+                <p className="text-xs sm:text-[18px] md:text-[18px] text-gray-500">CEO, Co-founder</p>
+                <h3 className="font-semibold text-[18px] sm:text-base md:text-base">Jane Doe</h3>
               </div>
             </div>
           ))}

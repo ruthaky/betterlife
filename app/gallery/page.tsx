@@ -110,7 +110,7 @@ export default function Gallery() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Schedule a visit
           </h2>
-          <p className="text-gray-600 mb-6 text-sm sm:text-base max-w-2xl">
+          <p className="text-gray-600 mb-6 text-[18px] sm:text-base max-w-2xl">
             We’d love to meet you and show you around. Schedule a visit to tour
             our facility, ask questions, and see firsthand what our program
             offers. Let us know your preferred date and time — we’ll work with
