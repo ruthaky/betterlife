@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Betterlife Adult Program",
     description:
-      "Compassionate ABA therapy in Portland, Oregon. SunBeam ABA Therapy empowers children with autism to learn, grow, and thrive through personalized care and family-centered support.",
+      "Our mission is to support adults by providing high-quality care, meaningful opportunities for growth, and a compassionate community where every individual is valued.",
     url: "https://betterlifeorg.com",
     siteName: "Betterlife Adult Program",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: "/asset/betterlife-thumbnail.png", // Replace this with your image name
         width: 1200,
         height: 630,
-        alt: "Betterlife - Compassionate ABA therapy in Portland, Oregon. SunBeam ABA Therapy empowers children with autism to learn, grow, and thrive through personalized care and family-centered support.", // Optional alt text
+        alt: "Betterlife - Our mission is to support adults by providing high-quality care, meaningful opportunities for growth, and a compassionate community where every individual is valued.", // Optional alt text
       },
     ],
     locale: "en_US",
@@ -71,7 +71,7 @@ export default function RootLayout({
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="Betterlife- Compassionate ABA therapy in Portland, Oregon. SunBeam ABA Therapy empowers children with autism to learn, grow, and thrive through personalized care and family-centered support."
+          content="Betterlife- Our mission is to support adults by providing high-quality care, meaningful opportunities for growth, and a compassionate community where every individual is valued."
         />
         <meta
           property="og:image:url"
@@ -86,7 +86,7 @@ export default function RootLayout({
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="Betterlife- Compassionate ABA therapy in Portland, Oregon. SunBeam ABA Therapy empowers children with autism to learn, grow, and thrive through personalized care and family-centered support."
+          content="Betterlife- Our mission is to support adults by providing high-quality care, meaningful opportunities for growth, and a compassionate community where every individual is valued."
         />
         <meta
           property="og:image:url"
