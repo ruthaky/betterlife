@@ -57,7 +57,7 @@ export default function Gallery() {
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap gap-4 mb-12 text-gray-600 font-medium">
+        <div className="flex flex-wrap gap-8 mb-12 text-gray-600 font-medium">
           {["ALL", "Facility", "Community", "Activities"].map((cat) => (
             <button
               key={cat}
@@ -80,7 +80,7 @@ export default function Gallery() {
     <motion.div
       key={img.src}
       className={`relative w-full h-full ${
-        i % 2 !== 0 ? "md:translate-y-6" : ""
+        i % 2 !== 0 ? "md:translate-y-8" : ""
       }`}
       variants={imageVariants}
       initial="hidden"
