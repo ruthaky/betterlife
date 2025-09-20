@@ -103,7 +103,7 @@ export default function Navbar() {
               <p onClick={() => setMenuOpen(false)}>betterlifellc8@gmail.com</p>
               <p onClick={() => setMenuOpen(false)}>12220 SW Grant Ave
               <br></br>Portland, OR  97223</p>
-              <p onClick={() => setMenuOpen(false)}>09112, Idd</p>
+              {/* <p onClick={() => setMenuOpen(false)}>09112, Idd</p> */}
             </div>
 
             <Link href="/schedule" onClick={() => setMenuOpen(false)}><button className="mt-10 flex items-center text-[#0f1c24] font-medium">

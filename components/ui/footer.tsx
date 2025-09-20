@@ -27,13 +27,13 @@ export default function Footer() {
             <p className="text-[18px] md:text-base">
               Where every day is a step forward
             </p>
-            <div className="flex mt-4 flex-wrap gap-4 text-white text-[18px] md:text-base">
+            {/* <div className="flex mt-4 flex-wrap gap-4 text-white text-[18px] md:text-base">
             <Link href="#">Instagram</Link>
             <Link href="#">YouTube</Link>
             <Link href="#">TikTok</Link>
             <Link href="#">Facebook</Link>
             <Link href="#">Medium</Link>
-          </div>
+          </div> */}
           </div>
         
         </div>
@@ -45,7 +45,7 @@ export default function Footer() {
     <p className="md:text-right">12220 SW Grant Ave
       <br></br>
     Portland, OR  97223</p>
-    <p className="md:text-right">09112, Idd</p>
+    {/* <p className="md:text-right">09112, Idd</p> */}
   </div>
         </div>
       </div>
@@ -53,7 +53,7 @@ export default function Footer() {
       {/* Divider + Copyright */}
       <div className="relative z-10 mt-8 border-t border-white/30 pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs md:text-[18px] ">
         <p>© Better Life 2025. All rights reserved.</p>
-        <p>Designed & Developed by <span className="text-black"><Link href="https://www.zareinnovations.com">Zare Innovations</Link></span></p>
+        <p>Designed & Developed by <span className="font-bold"><Link href="https://www.zareinnovations.com">Zare Innovations</Link></span></p>
       </div>
     </footer>
   );

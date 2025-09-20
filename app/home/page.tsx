@@ -74,7 +74,11 @@ export default function Home() {
           At Betterlife Adult Program, we empower individuals to live richer, more independent lives — every day.
           </p>
           <Link href="/schedule">
-            <button className="mt-6 px-6 py-3 bg-[#0E1A2B] text-white rounded-lg shadow-md hover:bg-[#1a2a40] transition">
+            <button  className="mt-6 px-6 py-3 rounded-lg text-white 
+                 bg-[#0E1A2B] 
+                 transition-all duration-300 ease-out 
+                 hover:bg-[#97C4B9] hover:scale-105 hover:shadow-lg 
+                 active:scale-95">
               Schedule a tour
             </button>
           </Link>
@@ -97,11 +101,21 @@ export default function Home() {
 >
 At Better Life Adult Program, we believe everyone deserves to live with dignity, purpose, and joy. Our mission is to support adults by providing high-quality care, meaningful opportunities for growth, and a compassionate community where every individual is valued. Whether enhancing daily living skills, engaging in social and recreational activities, or receiving health-oriented support — we’re here to help people thrive.
 </ScrollReveal>
-<div className='w-full flex justify-end items-center'><Link href="/about">
-          <button className="mt-6 px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
-            Read More
-          </button>
-        </Link></div>
+<div className="w-full flex justify-end items-center">
+  <Link href="/about">
+    <button
+      className="mt-6 px-6 py-3 rounded-lg text-white 
+                 bg-[#0E1A2B] 
+                 transition-all duration-300 ease-out 
+                 hover:bg-[#97C4B9] hover:scale-105 hover:shadow-lg 
+                 active:scale-95"
+    >
+      Read More
+    </button>
+  </Link>
+</div>
+
+
    
        
       </section>
@@ -146,7 +160,11 @@ At Better Life Adult Program, we believe everyone deserves to live with dignity,
              
             <div className='w-full flex items-left mt-4'><Link href="/services">
                 
-                <motion.button className="bg-[#0E1A2B] px-6 py-3 text-white rounded-lg hover:opacity-90 transition-all duration-300">
+                <motion.button  className="mt-6 px-6 py-3 rounded-lg text-white 
+                 bg-[#0E1A2B] 
+                 transition-all duration-300 ease-out 
+                 hover:bg-[#97C4B9] hover:scale-105 hover:shadow-lg 
+                 active:scale-95">
                   Read More
                 </motion.button>
               </Link></div>
@@ -195,7 +213,11 @@ At Better Life Adult Program, we believe everyone deserves to live with dignity,
         We’d love to meet you and show you around. Schedule a visit to tour our facility, ask questions, and see firsthand what our program offers. Let us know your preferred date and time — we’ll work with you to make your first visit as comfortable and informative as possible.
         </p>
         <Link href="/schedule">
-          <button className="px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
+          <button  className="mt-6 px-6 py-3 rounded-lg text-white 
+                 bg-[#0E1A2B] 
+                 transition-all duration-300 ease-out 
+                 hover:bg-[#97C4B9] hover:scale-105 hover:shadow-lg 
+                 active:scale-95">
           Arrange Your Visit
           </button>
         </Link>
