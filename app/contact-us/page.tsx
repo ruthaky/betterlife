@@ -89,7 +89,7 @@ export default function Contact() {
         {/* Contact Form */}
         <section className="flex flex-col items-left justify-center px-6 sm:px-10 md:px-20 py-16 md:py-28">
           <div className="w-full max-w-3xl">
-            <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold text-[#0f1c24] mb-2">Get In Touch</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md: mb-6">Get in touch</h2>
             <p className="text-gray-600 mb-6 text-[18px] sm:text-base">
             We’re here to help. Whether you have a question, want to arrange a visit, or just want to learn more — our team is ready to respond quickly.
             </p>

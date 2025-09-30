@@ -40,8 +40,21 @@ export default function Footer() {
 
         {/* Contact + Socials */}
         <div className="flex flex-col items-start md:items-end gap-3 w-full md:w-auto">
-        <div className="md:text-right text-white space-y-2">
-    <p className="md:text-right">betterlifellc8@gmail.com</p>
+        <div className="md:text-right text-white space-y-2 flex flex-col">
+        <a
+    href="mailto:betterlifellc8@gmail.com"
+    className="hover:text-[#EEB7AE] transition-colors md:text-right"
+  >
+    betterlifellc8@gmail.com
+  </a>
+
+  <a
+    href="tel:+19713844053"
+    className="hover:text-[#EEB7AE] transition-colors md:text-right "
+  >
+    (971) 384-4053
+  </a>
+    
     <p className="md:text-right">12220 SW Grant Ave
       <br></br>
     Portland, OR  97223</p>
@@ -51,7 +64,7 @@ export default function Footer() {
       </div>
 
       {/* Divider + Copyright */}
-      <div className="relative z-10 mt-8 border-t border-white/30 pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs md:text-[18px] ">
+      <div className="relative z-10 mt-8 border-t border-white/30 pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs md:text-[14px] ">
         <p>© Better Life 2025. All rights reserved.</p>
         <p>Designed & Developed by <span className="font-bold"><Link href="https://www.zareinnovations.com">Zare Innovations</Link></span></p>
       </div>

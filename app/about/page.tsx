@@ -4,6 +4,18 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export default function About() {
+  const teamMembers = [
+    {
+      name: "Dagmawit Kiros",
+      role: "CEO, Co-founder",
+      image: "/asset/team1.jpeg",
+    },
+    {
+      name: "Tsion Kiros",
+      role: "Co-founder",
+      image: "/asset/team2.jpeg",
+    },]
+
   return (
     <main className="font-sans bg-[#FAFAF7] text-[#0E1A2B]">
 
@@ -29,9 +41,7 @@ export default function About() {
 
       {/* Core Values */}
       <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 py-12 md:py-20">
-  <h2 className="text-2xl sm:text-3xl font-bold mb-8 md:mb-10 text-left">
-    Our Core Values
-  </h2>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8">Our core values</h2>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 h-auto md:h-[200px]">
     {/* Card 1 */}
@@ -79,7 +89,7 @@ export default function About() {
 
       {/* History */}
       <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 py-12 md:py-20">
-        <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-4 md:mb-6">Our History</h2>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md: mb-6">Our history</h2>
         <p className="text-gray-600 text-[18px] w-full mb-4">
         Our program was founded by sisters Tsion Kiros and Dagmawit Kiros, who have dedicated over seven years to serving individuals with developmental disabilities. Their experience spans both residential and center-based settings, giving them a deep understanding of the unique challenges and opportunities that come with supporting adults in different environments. 
 
@@ -92,18 +102,34 @@ What began as a shared vision between two sisters has grown into a program dedic
         </p>
       </section>
 
-       {/* History */}
-       <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 py-12 md:py-20">
-        <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-4 md:mb-6">About the founders</h2>
-        <p className="text-gray-600 text-[18px] w-full mb-4">
-        Dagmawit Kiros and her sister Tsion Kiros are the founders of this day program for adults with developmental disabilities. Dagmawit graduated from Texas Tech University with a degree in Nutritional Science and began her career as a Registered Behavior Technician at an ABA center. She then served as Residential Manager at a 24-hour residential home, gaining extensive experience supporting both children and adults in residential and center-based settings. 
 
-Together, Dagmawit and Tsion are committed to creating a safe, supportive, and empowering environment where individuals can build skills, independence, and confidence while feeling valued and included. 
-        </p>
-        <p className="text-gray-600 text-[18px] w-full">
-        Tsion Kiros is a co-founder of this day program for adults with developmental disabilities. She earned a Bachelor of Science in Human Development and Family Studies and a Master’s in Healthcare Administration from Texas Tech University. Tsion has extensive experience supporting individuals with developmental disabilities across a variety of settings, including center-based programs, residential facilities, and day programs. Her expertise and dedication ensure that the program provides high-quality, person-centered care that fosters growth, independence, and meaningful community connections. 
-        </p>
-      </section>
+     {/* About the founders */}
+     <section className=" px-6 sm:px-10 md:px-20 py-12 md:py-20 gap-8">
+     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md: mb-6">About the founders</h2>
+<div className='flex flex-col md:flex-row items-stretch justify-center items-center gap-10'>
+  {/* Text */}
+  <div className="flex-1">
+      <p className="text-gray-600 text-[18px] w-full mb-4">
+        Dagmawit Kiros and her sister Tsion Kiros are the founders of this day program for adults with developmental disabilities. Dagmawit graduated from Texas Tech University with a degree in Nutritional Science and began her career as a Registered Behavior Technician at an ABA center. She then served as Residential Manager at a 24-hour residential home, gaining extensive experience supporting both children and adults in residential and center-based settings.
+        <br /><br />
+        Together, Dagmawit and Tsion are committed to creating a safe, supportive, and empowering environment where individuals can build skills, independence, and confidence while feeling valued and included.
+      </p>
+      <p className="text-gray-600 text-[18px] w-full">
+        Tsion Kiros is a co-founder of this day program for adults with developmental disabilities. She earned a Bachelor of Science in Human Development and Family Studies and a Master’s in Healthcare Administration from Texas Tech University. Tsion has extensive experience supporting individuals with developmental disabilities across a variety of settings, including center-based programs, residential facilities, and day programs. Her expertise and dedication ensure that the program provides high-quality, person-centered care that fosters growth, independence, and meaningful community connections.
+      </p>
+    </div>
+     {/* Image wrapper */}
+  <div className="relative w-[400px] flex-shrink-0">
+    <Image
+          src="/asset/team.jpeg"
+      alt="Emperor Haile Selassie"
+      fill
+      className="hidden md:flex object-cover object-bottom border border-primary border-2 rounded-2xl"
+    />
+  </div>
+  </div>
+</section>
+
 
       {/* Family & Friends */}
       <section className="hidden flex flex-col justify-center px-6 sm:px-10 md:px-20 relative py-12 md:py-20">
@@ -136,27 +162,31 @@ Celebrate successes collectively, recognizing how relationships enrich participa
 
       {/* Team */}
       <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 py-12 md:py-20">
-        <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-6">Our Team</h2>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md: mb-6">Our team</h2>
         <p className="text-gray-600 text-[18px] w-full mb-10 text-left">
-        Our dedicated team brings together professional experience, passion, and compassion. From experienced caregivers, therapists, and activity coordinators to administrative staff, everyone at Better Life shares a single goal: helping each participant live a better life.
+          Our dedicated team brings together professional experience, passion, and compassion. From experienced caregivers, therapists, and activity coordinators to administrative staff, everyone at Better Life shares a single goal: helping each participant live a better life.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-          {Array.from({ length: 2 }).map((_, i) => (
+          {teamMembers.map((member, i) => (
             <div
               key={i}
-              className="bg-white shadow rounded-2xl overflow-hidden text-center"
+              className="bg-white shadow rounded-2xl overflow-hidden  text-center"
             >
               <Image
-                src="/asset/teamplaceholder.png"
-                alt="Team Member"
+                src={member.image}
+                alt={member.name}
                 width={300}
                 height={300}
-                className="w-full h-64 sm:h-60 md:h-64 object-cover"
+                className="w-full h-64 sm:h-60 md:h-[380px] object-cover"
               />
               <div className="p-4">
-                <p className="text-xs sm:text-[18px] md:text-[18px] text-gray-500">CEO, Co-founder</p>
-                <h3 className="font-semibold text-[18px] sm:text-base md:text-base">Jane Doe</h3>
+                <p className="text-xs sm:text-[18px] md:text-[18px] text-gray-500">
+                  {member.role}
+                </p>
+                <h3 className="font-semibold text-[18px] sm:text-base md:text-base">
+                  {member.name}
+                </h3>
               </div>
             </div>
           ))}

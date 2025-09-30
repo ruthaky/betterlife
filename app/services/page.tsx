@@ -56,7 +56,7 @@ export default function ServicesPage() {
             </div>
             
             <section className="text-left">
-<h2 className="text-2xl font-bold mb-4">Life Skills Training</h2>
+<h2 className="text-3xl font-bold my-5">Life Skills Training</h2>
 <p>
 At our day program, we believe that every individual deserves the opportunity to live as independently and confidently as possible. Our Life Skills Training program is designed to help adults with developmental disabilities develop practical skills they can use every day at home, in the community, and in their personal lives. We focus on teaching in a supportive, hands-on environment where participants can learn at their own pace and celebrate progress along the way.
 </p>
@@ -125,7 +125,7 @@ Community Integration
               <Image src={s2} alt="Icon" width={40} height={40} className="rounded-xl" />
             </div>
             <section className="text-left">
-<h2 className="text-2xl font-bold mb-4">Social and Recreational Activities</h2>
+<h2 className="text-3xl font-bold my-5">Social and Recreational Activities</h2>
 <p>
 We know that connection, fun, and friendships are an essential part of a fulfilling life. Our Social and Recreational Activities program is designed to encourage social interaction, creativity, and joy while helping adults with developmental disabilities build meaningful relationships and discover new interests.
 </p>
@@ -186,7 +186,7 @@ Skill-Building Activities
               <Image src={s3} alt="Icon" width={40} height={40} className="rounded-xl" />
             </div>
             <section className="text-left">
-<h2 className="text-2xl font-bold mb-4">Community Integration</h2>
+<h2 className="text-3xl font-bold my-5">Community Integration</h2>
 <p>
 We believe that everyone deserves the opportunity to be an active, valued member of their community. Our Community Integration program helps adults with developmental disabilities gain confidence, independence, and meaningful connections by participating in everyday community life.
 </p>
@@ -247,7 +247,7 @@ Work and Vocational Readiness
               <Image src={s4} alt="Icon" width={40} height={40} className="rounded-xl" />
             </div>
             <section className="text-left">
-<h2 className="text-2xl font-bold mb-4">Health and Wellness Support</h2>
+<h2 className="text-3xl font-bold my-5">Health and Wellness Support</h2>
 <p>
 Good health is the foundation for independence, confidence, and overall quality of life. Our Health and Wellness Support program helps adults with developmental disabilities build healthy routines, practice self-care, and develop lifelong habits that promote both physical and emotional well-being.
 </p>

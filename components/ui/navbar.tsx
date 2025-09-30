@@ -98,13 +98,28 @@ export default function Navbar() {
                   : "opacity-10 translate-y-0"
               }`}>Gallery </div></Link>
             </div>
-
             <div className="mt-10 flex flex-col gap-2 text-sm text-gray-500 text-left">
-              <p onClick={() => setMenuOpen(false)}>betterlifellc8@gmail.com</p>
-              <p onClick={() => setMenuOpen(false)}>12220 SW Grant Ave
-              <br></br>Portland, OR  97223</p>
-              {/* <p onClick={() => setMenuOpen(false)}>09112, Idd</p> */}
-            </div>
+  <a
+    href="mailto:betterlifellc8@gmail.com"
+    onClick={() => setMenuOpen(false)}
+    className="hover:text-[#EEB7AE] transition-colors"
+  >
+    betterlifellc8@gmail.com
+  </a>
+
+  <a
+    href="tel:+19713844053"
+    className="hover:text-[#EEB7AE] transition-colors"
+  >
+    (971) 384-4053
+  </a>
+
+  <p onClick={() => setMenuOpen(false)}>
+    12220 SW Grant Ave
+    <br /> Portland, OR 97223
+  </p>
+</div>
+
 
             <Link href="/schedule" onClick={() => setMenuOpen(false)}><button className="mt-10 flex items-center text-[#0f1c24] font-medium">
               <span className="mr-2 text-[30px]">→</span> Schedule a visit
