@@ -88,7 +88,7 @@ export default function About() {
 
 
       {/* History */}
-      <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 py-12 md:py-20">
+      <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 py-8 md:py-20">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md: mb-6">Our history</h2>
         <p className="text-gray-600 text-[18px] w-full mb-4">
         Our program was founded by sisters Tsion Kiros and Dagmawit Kiros, who have dedicated over seven years to serving individuals with developmental disabilities. Their experience spans both residential and center-based settings, giving them a deep understanding of the unique challenges and opportunities that come with supporting adults in different environments. 
@@ -104,7 +104,7 @@ What began as a shared vision between two sisters has grown into a program dedic
 
 
      {/* About the founders */}
-     <section className=" px-6 sm:px-10 md:px-20 py-12 md:py-20 gap-8">
+     <section className=" px-6 sm:px-10 md:px-20 pb-5 md:py-20 gap-8">
      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md: mb-6">About the founders</h2>
 <div className='flex flex-col md:flex-row items-stretch justify-center items-center gap-10'>
   {/* Text */}
@@ -132,7 +132,7 @@ What began as a shared vision between two sisters has grown into a program dedic
 
 
       {/* Family & Friends */}
-      <section className="hidden flex flex-col justify-center px-6 sm:px-10 md:px-20 relative py-12 md:py-20">
+      <section className="hidden flex flex-col justify-center px-6 sm:px-10 md:px-20 relative pb-8 md:py-20">
         <div
           className="absolute top-0 left-0 w-full h-16 md:h-20 bg-no-repeat bg-center"
           style={{ backgroundImage: 'url(/wave-pattern.png)' }}
@@ -161,8 +161,8 @@ Celebrate successes collectively, recognizing how relationships enrich participa
       </section>
 
       {/* Team */}
-      <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 py-12 md:py-20">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md: mb-6">Our team</h2>
+      <section className="flex flex-col justify-center px-6 sm:px-10 md:px-20 pb-8 md:py-20">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">Our team</h2>
         <p className="text-gray-600 text-[18px] w-full mb-10 text-left">
           Our dedicated team brings together professional experience, passion, and compassion. From experienced caregivers, therapists, and activity coordinators to administrative staff, everyone at Better Life shares a single goal: helping each participant live a better life.
         </p>
