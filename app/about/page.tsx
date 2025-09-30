@@ -178,7 +178,7 @@ Celebrate successes collectively, recognizing how relationships enrich participa
                 alt={member.name}
                 width={300}
                 height={300}
-                className="w-full h-64 sm:h-60 md:h-[380px] object-cover"
+                className="w-full h-[360px] md:h-[380px] object-cover"
               />
               <div className="p-4">
                 <p className="text-xs sm:text-[18px] md:text-[18px] text-gray-500">
