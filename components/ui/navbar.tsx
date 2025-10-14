@@ -100,11 +100,11 @@ export default function Navbar() {
             </div>
             <div className="mt-10 flex flex-col gap-2 text-sm text-gray-500 text-left">
   <a
-    href="mailto:betterlifellc8@gmail.com"
+    href="mailto:betterlife_llc@outlook.com"
     onClick={() => setMenuOpen(false)}
     className="hover:text-[#EEB7AE] transition-colors"
   >
-    betterlifellc8@gmail.com
+    betterlife_llc@outlook.com
   </a>
 
   <a
@@ -159,7 +159,7 @@ export default function Navbar() {
   </Link>
 
   <div className="mt-10 text-center text-gray-500 space-y-2">
-    <p>betterlifellc8@gmail.com</p>
+    <p>betterlife_llc@outlook.com</p>
     <p>12220 SW Grant Ave
       <br></br>
     Portland, OR  97223</p>

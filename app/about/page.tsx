@@ -7,7 +7,7 @@ export default function About() {
   const teamMembers = [
     {
       name: "Dagmawit Kiros",
-      role: "CEO, Co-founder",
+      role: "Co-founder",
       image: "/asset/team1.jpeg",
     },
     {

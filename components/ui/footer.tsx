@@ -42,10 +42,10 @@ export default function Footer() {
         <div className="flex flex-col items-start md:items-end gap-3 w-full md:w-auto">
         <div className="md:text-right text-white space-y-2 flex flex-col">
         <a
-    href="mailto:betterlifellc8@gmail.com"
+    href="mailto:betterlife_llc@outlook.com"
     className="hover:text-[#EEB7AE] transition-colors md:text-right"
   >
-    betterlifellc8@gmail.com
+    betterlife_llc@outlook.com
   </a>
 
   <a
