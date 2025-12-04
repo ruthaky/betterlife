@@ -304,11 +304,16 @@ Emotional Well-Being
         <p className="text-gray-600 mb-6 text-[18px] sm:text-base max-w-full md:max-w-2xl">
         We’d love to meet you and show you around. Schedule a visit to tour our facility, ask questions, and see firsthand what our program offers. Let us know your preferred date and time — we’ll work with you to make your first visit as comfortable and informative as possible.
         </p>
-        <Link href="/schedule">
+        {/* <Link href="/schedule">
           <button className="px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
           Arrange Your Visit
           </button>
-        </Link>
+        </Link> */}
+          <Link href="/contact-us">
+            <button className="px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
+              Contact Us
+            </button>
+          </Link>
       </section>
 
     </div>
