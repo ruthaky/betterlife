@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
 import { useState } from "react";
+import { SOCIAL_LINKS } from "@/lib/social-links";
+import Link from "next/link";
 
 export default function Contact() {
   const initialFormData = {
@@ -84,6 +86,23 @@ export default function Contact() {
           Connect with us today, and let’s explore what Better Life can offer. Whether you’re searching for compassionate care, meaningful programs, or a welcoming community, we’re here to walk with you every step of the way. Our team is ready to answer your questions, guide you through our services, and help you or your loved one take the next step toward a more fulfilling and independent life.
           </p>
         </div>
+        <div className="flex flex-wrap gap-3 mt-4">
+                {SOCIAL_LINKS.map(({ name, href, Icon }) => {
+                  const opensInNewTab = href.startsWith("http");
+                  return (
+                    <Link
+                      key={name}
+                      href={href}
+                      target={opensInNewTab ? "_blank" : undefined}
+                      rel={opensInNewTab ? "noreferrer" : undefined}
+                      aria-label={name}
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/70 text-black transition hover:bg-white"
+                    >
+                      <Icon className="h-5 w-5" />
+                    </Link>
+                  );
+                })}
+              </div>
       </section>
 
         {/* Contact Form */}

@@ -166,12 +166,12 @@ export default function Navbar() {
     <p>09112, Idd</p>
   </div>
 
-  <button
+  {/* <button
     className="mt-6 px-6 py-3 bg-[#0f1c24] text-white rounded-lg"
     onClick={() => setMenuhOpen(false)}
   >
     Schedule a visit
-  </button>
+  </button> */}
 </div>
 
 

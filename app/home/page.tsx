@@ -71,15 +71,24 @@ export default function Home() {
         <div className="max-w-lg z-10 text-left">
         <h1 className="text-[50px] md:text-[85px] md:w-[600px] font-bold leading-[0.90]"> We Are <br /> <span>Committed to </span> <br /> <span className="text-[#97C4B9]"> Quality Care</span> </h1>
           <p className="text-gray-600 mt-4 text-2xl">
-          At Betterlife Adult Program, we empower individuals to live richer, more independent lives — every day.
+          At Betterlife Adult Program, we empower individuals to live richer, more independent lives, every day.
           </p>
-          <Link href="/schedule">
+          {/* <Link href="/schedule">
             <button  className="mt-6 px-6 py-3 rounded-lg text-white 
                  bg-[#0E1A2B] 
                  transition-all duration-300 ease-out 
                  hover:bg-[#97C4B9] hover:scale-105 hover:shadow-lg 
                  active:scale-95">
               Schedule a tour
+            </button>
+          </Link> */}
+          <Link href="/contact-us">
+            <button  className="mt-6 px-6 py-3 rounded-lg text-white 
+                 bg-[#0E1A2B] 
+                 transition-all duration-300 ease-out 
+                 hover:bg-[#97C4B9] hover:scale-105 hover:shadow-lg 
+                 active:scale-95">
+              Contact Us
             </button>
           </Link>
         </div>
