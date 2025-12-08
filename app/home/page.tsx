@@ -221,7 +221,7 @@ At Better Life Adult Program, we believe everyone deserves to live with dignity,
         <p className="text-gray-600 mb-6 text-[18px]">
         We’d love to meet you and show you around. Schedule a visit to tour our facility, ask questions, and see firsthand what our program offers. Let us know your preferred date and time — we’ll work with you to make your first visit as comfortable and informative as possible.
         </p>
-        {/* <Link href="/schedule">
+        <Link href="/schedule">
           <button  className="mt-6 px-6 py-3 rounded-lg text-white 
                  bg-[#0E1A2B] 
                  transition-all duration-300 ease-out 
@@ -229,12 +229,12 @@ At Better Life Adult Program, we believe everyone deserves to live with dignity,
                  active:scale-95">
           Arrange Your Visit
           </button>
-        </Link> */}
-        <Link href="/contact-us">
+        </Link>
+        {/* <Link href="/contact-us">
             <button className="px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
               Contact Us
             </button>
-          </Link>
+          </Link> */}
       </section>
     </main>
   );

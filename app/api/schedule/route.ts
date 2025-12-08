@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "Website Schedule <onboarding@resend.dev>", // Verified sender email
-      to: ["betterlife_llc@outlook.com"], // Replace with your receiving email
+      to: ["betterlifellc8@gmail.com"], // Replace with your receiving email
       subject: "New Visit Scheduled",
       html: `
         <h2>New Visit Scheduled</h2>

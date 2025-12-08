@@ -12,6 +12,18 @@ export default function Contact() {
     phonenumber: "",
     message: "",
   };
+  const phoneNumbers = [
+    { display: "(971) 384-4053", tel: "+19713844053" },
+    { display: "(832) 605-2242", tel: "+18326052242" },
+    { display: "(469) 986-9639", tel: "+14699869639" },
+  ];
+  const phoneLink = SOCIAL_LINKS.find((link) => link.name === "Phone");
+  const emailLink = SOCIAL_LINKS.find((link) => link.name === "Email");
+  const PhoneIcon = phoneLink?.Icon;
+  const EmailIcon = emailLink?.Icon;
+  const otherLinks = SOCIAL_LINKS.filter(
+    (link) => link.name !== "Phone" && link.name !== "Email"
+  );
 
   const [formData, setFormData] = useState(initialFormData);
   const [status, setStatus] = useState("");
@@ -86,22 +98,64 @@ export default function Contact() {
           Connect with us today, and let’s explore what Better Life can offer. Whether you’re searching for compassionate care, meaningful programs, or a welcoming community, we’re here to walk with you every step of the way. Our team is ready to answer your questions, guide you through our services, and help you or your loved one take the next step toward a more fulfilling and independent life.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3 mt-4">
-                {SOCIAL_LINKS.map(({ name, href, Icon }) => {
-                  const opensInNewTab = href.startsWith("http");
-                  return (
+        <div className="flex flex-col gap-4 mt-4">
+                {phoneLink && PhoneIcon && (
+                  <div className="flex items-center gap-4 flex-wrap">
                     <Link
-                      key={name}
-                      href={href}
-                      target={opensInNewTab ? "_blank" : undefined}
-                      rel={opensInNewTab ? "noreferrer" : undefined}
-                      aria-label={name}
+                      href={phoneLink.href}
+                      aria-label={phoneLink.name}
                       className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/70 text-black transition hover:bg-white"
                     >
-                      <Icon className="h-5 w-5" />
+                      <PhoneIcon className="h-5 w-5" />
                     </Link>
-                  );
-                })}
+                    <div className="flex flex-row gap-5 text-[16px] text-gray-700 leading-tight">
+                      {phoneNumbers.map(({ display, tel }) => (
+                        <a
+                          key={tel}
+                          href={`tel:${tel}`}
+                          className="hover:text-[#0f1c24] transition-colors"
+                        >
+                          {display}  ,
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {emailLink && EmailIcon && (
+                  <div className="flex items-center gap-4">
+                    <Link
+                      href={emailLink.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={emailLink.name}
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/70 text-black transition hover:bg-white"
+                    >
+                      <EmailIcon className="h-5 w-5" /> 
+                    </Link>
+                    <div className="flex flex-row gap-5 text-[16px] text-gray-700 leading-tight">
+                    betterlifellc8@gmail.com
+                    </div>
+                  </div>
+                )}
+                {otherLinks.length > 0 && (
+                  <div className="flex flex-wrap gap-3">
+                    {otherLinks.map(({ name, href, Icon }) => {
+                      const opensInNewTab = href.startsWith("http");
+                      return (
+                        <Link
+                          key={name}
+                          href={href}
+                          target={opensInNewTab ? "_blank" : undefined}
+                          rel={opensInNewTab ? "noreferrer" : undefined}
+                          aria-label={name}
+                          className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/70 text-black transition hover:bg-white"
+                        >
+                          <Icon className="h-5 w-5" />
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
       </section>
 

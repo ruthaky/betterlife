@@ -117,16 +117,16 @@ export default function Gallery() {
             you to make your first visit as comfortable and informative as
             possible.
           </p>
-          {/* <Link href="/schedule">
+          <Link href="/schedule">
             <button className="px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
               Arrange Your Visit
             </button>
-          </Link> */}
-          <Link href="/contact-us">
+          </Link>
+          {/* <Link href="/contact-us">
             <button className="px-6 py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] transition">
               Contact Us
             </button>
-          </Link>
+          </Link> */}
         </section>
       </div>
     </>

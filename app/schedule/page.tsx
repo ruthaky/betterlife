@@ -11,17 +11,23 @@ export default function SchedulePage() {
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const [successMsg, setSuccessMsg] = useState(""); // ✅ NEW
+  const [errorMsg, setErrorMsg] = useState("");     // ✅ NEW
+
   const times = ["9:00 AM", "10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:00 PM"];
 
   const handleSchedule = () => {
     if (!selectedDate || !selectedTime) return;
-    setStep("form"); // move to step 2
+    setStep("form");
   };
 
   const handleSubmit = async () => {
     if (!email || !phone) return;
 
     setLoading(true);
+    setSuccessMsg("");
+    setErrorMsg("");
+
     try {
       const res = await fetch("/api/schedule", {
         method: "POST",
@@ -30,19 +36,18 @@ export default function SchedulePage() {
       });
 
       if (res.ok) {
-        alert("✅ Scheduled successfully!");
-        setStep("calendar"); // reset
+        setSuccessMsg("Your booking has been scheduled successfully! 🎉");
+        setStep("calendar"); 
         setSelectedDate(null);
         setSelectedTime(null);
         setEmail("");
         setName("");
         setPhone("");
       } else {
-        alert("❌ Something went wrong, try again.");
+        setErrorMsg("Something went wrong. Please try again.");
       }
     } catch (err) {
-      console.error(err);
-      alert("❌ Failed to schedule.");
+      setErrorMsg("Failed to schedule. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -57,77 +62,101 @@ export default function SchedulePage() {
         <p className="text-gray-600">Where everyday is a step forward</p>
       </div>
 
-      {/* Right Scheduling Panel */}
+      {/* Right Panel */}
       <div className="flex-1 flex items-center justify-center px-5 md:px-0">
-        {step === "calendar" && (
-          <div className="w-full max-w-md text-center">
-            <h2 className="text-2xl font-bold mb-6">Where would you like to schedule a visit?</h2>
-            <input
-              type="date"
-              value={selectedDate ?? ""}
-              onChange={(e) => setSelectedDate(e.target.value)}
-              className="border rounded-lg p-2 mb-4 w-full"
-            />
+        <div className="w-full max-w-md text-center">
+          
+          {/* SUCCESS MESSAGE BELOW FORM */}
+          {successMsg && (
+            <p className="mb-4 p-3 rounded-lg bg-green-100 text-green-700 border border-green-300">
+              {successMsg}
+            </p>
+          )}
 
-            <div className="grid grid-cols-3 gap-3 mb-6">
-              {times.map((time) => (
-                <button
-                  key={time}
-                  onClick={() => setSelectedTime(time)}
-                  className={`px-4 py-2 rounded-lg border transition ${
-                    selectedTime === time
-                      ? "bg-[#97C4B9] text-white"
-                      : "bg-gray-100 hover:bg-gray-200"
-                  }`}
-                >
-                  {time}
-                </button>
-              ))}
-            </div>
+          {/* ERROR MESSAGE BELOW FORM */}
+          {errorMsg && (
+            <p className="mb-4 p-3 rounded-lg bg-red-100 text-red-700 border border-red-300">
+              {errorMsg}
+            </p>
+          )}
 
-            <button
-              onClick={handleSchedule}
-              disabled={!selectedDate || !selectedTime}
-              className="w-full py-3 bg-[#97C4B9] text-white rounded-lg hover:bg-[#7ea99e] disabled:opacity-50"
-            >
-              Next
-            </button>
-          </div>
-        )}
+          {/* STEP 1 — CALENDAR */}
+          {step === "calendar" && (
+            <>
+              <h2 className="text-2xl font-bold mb-6">Where would you like to schedule a visit?</h2>
 
-        {step === "form" && (
-          <div className="w-full max-w-md text-center">
-            <h2 className="text-2xl font-bold mb-6">Confirm Your Details</h2>
-            <input
-              type="name"
-              placeholder="Your Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="border rounded-lg p-2 mb-4 w-full"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="border rounded-lg p-2 mb-4 w-full"
-            />
-            <input
-              type="tel"
-              placeholder="Your Phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="border rounded-lg p-2 mb-6 w-full"
-            />
-            <button
-              onClick={handleSubmit}
-              disabled={loading}
-              className="w-full py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] disabled:opacity-50"
-            >
-              {loading ? "Submitting..." : "Confirm Booking"}
-            </button>
-          </div>
-        )}
+              <input
+                type="date"
+                value={selectedDate ?? ""}
+                onChange={(e) => setSelectedDate(e.target.value)}
+                className="border rounded-lg p-2 mb-4 w-full"
+              />
+
+              <div className="grid grid-cols-3 gap-3 mb-6">
+                {times.map((time) => (
+                  <button
+                    key={time}
+                    onClick={() => setSelectedTime(time)}
+                    className={`px-4 py-2 rounded-lg border transition ${
+                      selectedTime === time
+                        ? "bg-[#97C4B9] text-white"
+                        : "bg-gray-100 hover:bg-gray-200"
+                    }`}
+                  >
+                    {time}
+                  </button>
+                ))}
+              </div>
+
+              <button
+                onClick={handleSchedule}
+                disabled={!selectedDate || !selectedTime}
+                className="w-full py-3 bg-[#97C4B9] text-white rounded-lg hover:bg-[#7ea99e] disabled:opacity-50"
+              >
+                Next
+              </button>
+            </>
+          )}
+
+          {/* STEP 2 — FORM */}
+          {step === "form" && (
+            <>
+              <h2 className="text-2xl font-bold mb-6">Confirm Your Details</h2>
+
+              <input
+                type="name"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="border rounded-lg p-2 mb-4 w-full"
+              />
+
+              <input
+                type="email"
+                placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="border rounded-lg p-2 mb-4 w-full"
+              />
+
+              <input
+                type="tel"
+                placeholder="Your Phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="border rounded-lg p-2 mb-6 w-full"
+              />
+
+              <button
+                onClick={handleSubmit}
+                disabled={loading}
+                className="w-full py-3 bg-[#0E1A2B] text-white rounded-lg hover:bg-[#1a2a40] disabled:opacity-50"
+              >
+                {loading ? "Submitting..." : "Confirm Booking"}
+              </button>
+            </>
+          )}
+        </div>
       </div>
     </main>
   );
